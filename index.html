@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div id="topnav" class="topnav">
+            <a id="home_link" class="topnav_link" href="index.html">HOME</a>
+
+            <!-- Classic Menu -->
+            <nav role="navigation" id="topnav_menu">
+                <a class="topnav_link" href="page1.html">Les voitures</a>
+                <a class="topnav_link" href="page1.html">Les voitures</a>
+                <a class="topnav_link" href="page1.html">Les voitures</a>
+            </nav>
+
+            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                <!-- Some spans to act as a hamburger -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <!-- Responsive Menu -->
+            <nav role="navigation" id="topnav_responsive_menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="page1.html">Les voitures</a></li>
+                    <li><a href="page1.html">Les voitures</a></li>
+                    <li><a href="page1.html">Les voitures</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--
+    <img class="bg" id="bg1" src="space3.jpg" alt="">
+    -->
+
+</body>
+
+</html>
