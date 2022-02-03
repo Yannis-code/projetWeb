@@ -1,49 +1,94 @@
 /* ******************** GENERAL ******************** */
 
+html {
+    height: 100%;
+}
+
 body {
-    background-color: black;
-    background-image: url("space3.jpg");
+    background-color: red;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
 }
 
-.bg {
+
+/* ******************** PARALLAX ******************** */
+
+
+/* Application d'une image de fond au body */
+
+#bg {
     position: absolute;
-    object-fit: cover;
-    object-position: top;
+    z-index: -1;
     width: 100%;
-    max-height: 100%;
-    z-index: 0;
+    height: 100%;
+    background-image: url(src/img/space1.png), url(src/img/space2.png), url(src/img/space3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Comportement de la parallax réactive aux dimensions de la fenêtre*/
+
+@media (min-aspect-ratio: 3/2) {
+    #bg {
+        background-size: 110% auto;
+    }
+}
+
+@media (max-aspect-ratio: 3/2) {
+    #bg {
+        background-size: auto 110%;
+    }
+}
+
+@media (aspect-ratio: 3/2) {
+    #bg {
+        background-size: 110% 110%;
+    }
+}
+
+
+/* ******************** PAGE D'ACCUEIL ******************** */
+
+#welcome {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Arial";
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px #333;
+    opacity: .7;
+    font-size: 70px;
 }
 
 
 /* ******************** NAV BAR ******************** */
 
 .topnav {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.5);
     display: flex;
     align-items: center;
     width: 100%;
 }
 
 .topnav_link {
-    color: white;
+    color: rgba(255, 255, 255, .5);
     padding: 12px;
     text-decoration: none;
 }
 
 .topnav_link:hover {
-    color: #0078b4;
+    color: rgba(255, 255, 255, 1);
+    opacity: 1.0;
 }
 
 #home_link {
     margin-left: 10%;
 }
-
-
-/* hide responsive menu */
 
 #topnav_hamburger_icon,
 #topnav_responsive_menu {
