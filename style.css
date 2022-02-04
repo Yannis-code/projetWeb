@@ -538,6 +538,9 @@ body {
     .content_testimonial-4 .picto {
       padding-top: 100px;
     }
+    .content_testimonial-5 .picto {
+      padding-top: 100px;
+    }
     .item > label {
       font-size: 1.3rem;
     }
@@ -595,6 +598,19 @@ body {
   .content_testimonial-4 h1 {
     color: #f27935;
   }
+
+  .content_testimonial-5 .picto {
+    height: 100px;
+    width: 100px;
+    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .content_testimonial-5 h1 {
+    color: #e5f235;
+  }
   
   .content-test h1:first-letter {
     text-transform: uppercase;
@@ -626,6 +642,12 @@ body {
     border-right: solid 4px #f27935;
   }
   
+  input:checked ~ label.label_testimonial-5 {
+    color: #4235f2;
+    border-right: solid 4px #4235f2;
+  }
+  
+
   label.label_testimonial-1:before {
     content: " ";
     display: block;
@@ -669,6 +691,20 @@ body {
   }
   
   label.label_testimonial-4:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-position: center;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  label.label_testimonial-5:before {
     content: " ";
     display: block;
     position: absolute;
