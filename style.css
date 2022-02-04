@@ -549,7 +549,7 @@ body {
   .content_testimonial-1 .picto {
     height: 100px;
     width: 100px;
-    background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+    background-image: url("src/img/logo\ team/bds.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -563,7 +563,7 @@ body {
   .content_testimonial-2 .picto {
     height: 100px;
     width: 100px;
-    background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+    background-image: url("src/img/logo\ team/vitality.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -576,7 +576,7 @@ body {
   .content_testimonial-3 .picto {
     height: 100px;
     width: 100px;
-    background-image: url("https://i.postimg.cc/zV7sq04z/mod-Movers-Logo.jpg");
+    background-image: url("src/img/logo\ team/kcorp.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -589,7 +589,7 @@ body {
   .content_testimonial-4 .picto {
     height: 100px;
     width: 100px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url("src/img/logo\ team/guild.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -602,14 +602,14 @@ body {
   .content_testimonial-5 .picto {
     height: 100px;
     width: 100px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url("src/img/logo\ team/dignitas.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
   
   .content_testimonial-5 h1 {
-    color: #e5f235;
+    color: #4235f2;
   }
   
   .content-test h1:first-letter {
@@ -655,7 +655,7 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+    background-image: url("src/img/logo\ team/bds.png");
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -669,7 +669,7 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+    background-image: url("src/img/logo\ team/vitality.png");
     background-position: center;
     background-size: 75% 75%;
     border-radius: 50%;
@@ -683,7 +683,7 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/zV7sq04z/mod-Movers-Logo.jpg");
+    background-image: url("src/img/logo\ team/kcorp.png");
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -697,7 +697,7 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url("src/img/logo\ team/guild.png");
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -711,7 +711,7 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url("src/img/logo\ team/dignitas.png");
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -784,6 +784,23 @@ body {
     background-image: -webkit-linear-gradient(left, #ffffff, #f27935a3);
     background-image: -o-linear-gradient(left, #ffffff, #f27935a3);
     background-image: linear-gradient(to right, #ffffff, #f27935a3);
+    font-size: 1.2rem;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+    transition: font-size 0.5s;
+  }
+
+  .label_testimonial-5:hover {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ffffff),
+      to(#4235f2)
+    );
+    background-image: -webkit-linear-gradient(left, #ffffff, #4235f2);
+    background-image: -o-linear-gradient(left, #ffffff, #4235f2);
+    background-image: linear-gradient(to right, #ffffff, #4235f2);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
