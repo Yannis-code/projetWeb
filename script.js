@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function parallax(e) {
         // Vitesse de déplacement des plans
-        let speed1 = 0.00125;
-        let speed2 = 0.0025;
-        let speed3 = 0.0075;
+        let speed1 = 0.0025;
+        let speed2 = 0.0075;
+        let speed3 = 0.02;
         let _w = window.innerWidth / 2;
         let _h = window.innerHeight / 2;
         let _mouseX = e.clientX;
