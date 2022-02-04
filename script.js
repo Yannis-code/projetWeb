@@ -25,17 +25,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function parallax(e) {
         // Vitesse de déplacement des plans
-        let speed1 = 0.00125;
-        let speed2 = 0.0025;
-        let speed3 = 0.0075;
-        let _w = window.innerWidth / 2;
-        let _h = window.innerHeight / 2;
-        let _mouseX = e.clientX;
-        let _mouseY = e.clientY;
-        let _depth1 = `${50 - (_mouseX - _w) * speed1}% ${50 - (_mouseY - _h) * speed1}%`;
-        let _depth2 = `${50 - (_mouseX - _w) * speed2}% ${50 - (_mouseY - _h) * speed2}%`;
-        let _depth3 = `${50 - (_mouseX - _w) * speed3}% ${50 - (_mouseY - _h) * speed3}%`;
-        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-        bg.style.backgroundPosition = x;
+        let speed = [0.0025, 0.0040, 0.0075, 0.0200];
+        let depth = [];
+        for (let i = 0; i < speed.length; i++) {
+            depth[i] = `${50 - (e.clientX - window.innerWidth / 2) * speed[i]}% 
+            ${50 - (e.clientY - window.innerHeight / 2) * speed[i]}%`;
+        }
+        bg.style.backgroundPosition = `${depth[3]}, ${depth[2]}, ${depth[1]}, ${depth[0]}`;
     }
 })
