@@ -172,7 +172,7 @@ button:hover {
 .footer_container {
     text-align: center;
     padding: 10px;
-    color: white;
+    color: black;
 }
 
 
@@ -343,8 +343,10 @@ body {
     -ms-user-select: none;
     user-select: none;
     padding-top: 20px;
-  }
-  .d-block, h2{
+}
+
+.d-block,
+h2 {
     color: #33475c;
     font-weight: 700;
     font-size: 2.5rem;
@@ -352,50 +354,38 @@ body {
     margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;
-  }
-  
-  /* ============= Begin Testimonial Flexbox ============ */
-  #flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+}
+
+
+/* ============= Begin Testimonial Flexbox ============ */
+
+#carousel_container {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     width: 100%;
+    max-width: 1000px;
     min-height: 400px;
     height: 110vh;
-    max-width: 1000px;
     margin: auto;
-    background-color: #fff;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-  }
-  
-  #left-zone {
+}
+
+#carousel_selector {
     height: 50%;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
-  }
-  
-  #left-zone .list {
+}
+
+#carousel_teams {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -413,27 +403,27 @@ body {
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  
-  .item input {
+}
+
+.radio_team {
     display: none;
-  }
-  
-  label {
+}
+
+.label_team {
     display: block;
     opacity: 0.5;
     height: 50px;
     text-align: center;
     line-height: 50px;
     position: relative;
-  }
-  
-  label:hover {
+}
+
+.label_team:hover {
     opacity: 0.75;
     cursor: pointer;
-  }
-  
-  .content-test {
+}
+
+.content_team {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -460,22 +450,22 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     pointer-events: none;
-  }
-  
-  .content-test p {
+}
+
+.content_team p {
     max-width: 50%;
     text-align: center;
-  }
-  
-  #right-zone {
+}
+
+#displayer_team {
     width: 100%;
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     height: 50%;
-  }
-  
-  input:checked ~ .content-test {
+}
+
+.radio_team:checked~.content_team {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
@@ -485,341 +475,205 @@ body {
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
     opacity: 1;
-  }
-  
-  @media (min-width: 480px) {
-    #flex-container {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      min-height: auto;
-      height: 400px;
-      /* position: absolute; */
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  
-    #left-zone .list {
-      border-right: 2px solid #cccccc;
-    }
-  
-    .content-test {
-      width: 65%;
-      height: 100%;
-      pointer-events: auto;
-      -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-      transform: translateY(-100%);
-    }
-  
-    #left-zone {
-      width: 35%;
-    }
-  
-    #right-zone {
-      height: 100%;
-      width: 65%;
-    }
-  }
-  /* If the screen size is 480px or less */
-  @media (max-width: 480px) {
-    .content_testimonial-1 .picto {
-      padding-top: 100px;
-    }
-    .content_testimonial-2 .picto {
-      padding-top: 100px;
-    }
-    .content_testimonial-3 .picto {
-      padding-top: 100px;
-    }
-    .content_testimonial-4 .picto {
-      padding-top: 100px;
-    }
-    .content_testimonial-5 .picto {
-      padding-top: 100px;
-    }
-    .item > label {
-      font-size: 1.3rem;
-    }
-  }
-  
-  .content_testimonial-1 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("src/img/logo\ team/bds.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .content_testimonial-1 h1 {
-    color: rgb(238,54,150);
-    text-align: center;
-  }
-  
-  .content_testimonial-2 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("src/img/logo\ team/vitality.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .content_testimonial-2 h1 {
-    color: #f5d76e;
-  }
-  
-  .content_testimonial-3 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("src/img/logo\ team/kcorp.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .content_testimonial-3 h1 {
-    color: #4235f2;
-  }
-  
-  .content_testimonial-4 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("src/img/logo\ team/guild.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .content_testimonial-4 h1 {
-    color: rgb(210,18,23);
-  }
+}
 
-  .content_testimonial-5 .picto {
+@media (min-width: 480px) {
+    #carousel_container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        min-height: auto;
+        height: 400px;
+        /* position: absolute; */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    #carousel_teams {
+        border-right: 2px solid #cccccc;
+    }
+    .content_team {
+        width: 65%;
+        height: 100%;
+        pointer-events: auto;
+        transition: translateY(100%) 1s;
+    }
+    #carousel_selector {
+        width: 35%;
+    }
+    #displayer_team {
+        height: 100%;
+        width: 65%;
+    }
+}
+
+
+/* If the screen size is 480px or less */
+
+@media (max-width: 480px) {
+    .picto {
+        padding-top: 100px;
+    }
+    .label_team {
+        font-size: 1.3rem;
+    }
+}
+
+.picto {
     height: 100px;
     width: 100px;
-    background-image: url("src/img/logo\ team/dignitas.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  
-  .content_testimonial-5 h1 {
+}
+
+#label_team-1:before {
+    background-image: url("src/img/logo\ team/bds.png");
+}
+
+#label_team-2:before {
+    background-image: url("src/img/logo\ team/vitality.png");
+}
+
+#label_team-3:before {
+    background-image: url("src/img/logo\ team/kcorp.png");
+}
+
+#label_team-4:before {
+    background-image: url("src/img/logo\ team/guild.png");
+}
+
+#label_team-5:before {
+    background-image: url("src/img/logo\ team/dignitas.png");
+}
+
+#picto_team-1 {
+    background-image: url("src/img/logo\ team/bds.png");
+}
+
+#picto_team-2 {
+    background-image: url("src/img/logo\ team/vitality.png");
+}
+
+#picto_team-3 {
+    background-image: url("src/img/logo\ team/kcorp.png");
+}
+
+#picto_team-4 {
+    background-image: url("src/img/logo\ team/guild.png");
+}
+
+#picto_team-5 {
+    background-image: url("src/img/logo\ team/dignitas.png");
+}
+
+#content_team-1 h1 {
+    color: rgb(238, 54, 150);
+    text-align: center;
+}
+
+#content_team-2 h1 {
+    color: #f5d76e;
+}
+
+#content_team-3 h1 {
+    color: #4235f2;
+}
+
+#content_team-4 h1 {
+    color: rgb(210, 18, 23);
+}
+
+#content_team-5 h1 {
     color: #ffee00;
-  }
-  
-  .content-test h1:first-letter {
-    text-transform: uppercase;
-  }
-  
-  input:checked ~ label {
+}
+
+.radio_team:checked~.label_team {
     opacity: 1;
     -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  }
-  
-  input:checked ~ label.label_testimonial-1 {
-    color: rgb(238,54,150);
-    border-right: solid 4px rgb(238,54,150);
-  }
-  
-  input:checked ~ label.label_testimonial-2 {
+}
+
+.radio_team:checked~#label_team-1 {
+    color: rgb(238, 54, 150);
+    border-right: solid 4px rgb(238, 54, 150);
+}
+
+.radio_team:checked~#label_team-2 {
     color: #f5d76e;
     border-right: solid 4px #f5d76e;
-  }
-  
-  input:checked ~ label.label_testimonial-3 {
+}
+
+.radio_team:checked~#label_team-3 {
     color: #4235f2;
     border-right: solid 4px #4235f2;
-  }
-  
-  input:checked ~ label.label_testimonial-4 {
-    color: rgb(210,18,23);
-    border-right: solid 4px rgb(210,18,23);
-  }
-  
-  input:checked ~ label.label_testimonial-5 {
+}
+
+.radio_team:checked~#label_team-4 {
+    color: rgb(210, 18, 23);
+    border-right: solid 4px rgb(210, 18, 23);
+}
+
+.radio_team:checked~#label_team-5 {
     color: #ffee00;
     border-right: solid 4px #ffee00;
-  }
-  
+}
 
-  label.label_testimonial-1:before {
+.label_team:before {
     content: " ";
     display: block;
     position: absolute;
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("src/img/logo\ team/bds.png");
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
     border-radius: 50%;
-  }
-  
-  label.label_testimonial-2:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-    background-image: url("src/img/logo\ team/vitality.png");
-    background-position: center;
-    background-size: 75% 75%;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-  }
-  
-  label.label_testimonial-3:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-    background-image: url("src/img/logo\ team/kcorp.png");
-    background-position: center;
-    background-size: 75% 75%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-  }
-  
-  label.label_testimonial-4:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-    background-image: url("src/img/logo\ team/guild.png");
-    background-position: center;
-    background-size: 75% 75%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-  }
+}
 
-  label.label_testimonial-5:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-left: 15px;
-    background-image: url("src/img/logo\ team/dignitas.png");
-    background-position: center;
-    background-size: 75% 75%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-  }
-  
-  label:first-letter {
-    text-transform: uppercase;
-  }
-  
-  .label_testimonial-1:hover {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#ffffff),
-      to rgb(238,54,150)
-    );
-    background-image: -webkit-linear-gradient(left, #ffffff, rgb(238,54,150));
-    background-image: -o-linear-gradient(left, #ffffff, rgb(238,54,150));
-    background-image: linear-gradient(to right, #ffffff, rgb(238,54,150));
+.label_team:hover {
     font-size: 1.2rem;
-    -webkit-transition: font-size 0.5s;
-    -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
-  }
-  
-  .label_testimonial-2:hover {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#ffffff),
-      to(#f5d76e)
-    );
-    background-image: -webkit-linear-gradient(left, #ffffff, #f5d76e);
-    background-image: -o-linear-gradient(left, #ffffff, #f5d76e);
+}
+
+#label_team-1:hover {
+    background-image: linear-gradient(to right, #ffffff, rgb(238, 54, 150));
+}
+
+#label_team-2:hover {
     background-image: linear-gradient(to right, #ffffff, #f5d76e);
-    font-size: 1.2rem;
-    -webkit-transition: font-size 0.5s;
-    -o-transition: font-size 0.5s;
-    transition: font-size 0.5s;
-  }
-  
-  .label_testimonial-3:hover {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#ffffff),
-      to(#4235f2)
-    );
-    background-image: -webkit-linear-gradient(left, #ffffff, #4235f2);
-    background-image: -o-linear-gradient(left, #ffffff, #4235f2);
-    background-image: linear-gradient(to right, #ffffff, #4235f2);
-    font-size: 1.2rem;
-    -webkit-transition: font-size 0.5s;
-    -o-transition: font-size 0.5s;
-    transition: font-size 0.5s;
-  }
-  
-  .label_testimonial-4:hover {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#ffffff),
-      to(rgb(210,18,23))
-    );
-    background-image: -webkit-linear-gradient(left, #ffffff, rgb(210,18,23));
-    background-image: -o-linear-gradient(left, #ffffff, rgb(210,18,23));
-    background-image: linear-gradient(to right, #ffffff, rgb(210,18,23));
-    font-size: 1.2rem;
-    -webkit-transition: font-size 0.5s;
-    -o-transition: font-size 0.5s;
-    transition: font-size 0.5s;
-  }
+}
 
-  .label_testimonial-5:hover {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#ffffff),
-      to(#ffee00)
-    );
-    background-image: -webkit-linear-gradient(left, #ffffff, #ffee00);
-    background-image: -o-linear-gradient(left, #ffffff, #ffee00);
+#label_team-3:hover {
+    background-image: linear-gradient(to right, #ffffff, #4235f2);
+}
+
+#label_team-4:hover {
+    background-image: linear-gradient(to right, #ffffff, rgb(210, 18, 23));
+}
+
+#label_team-5:hover {
     background-image: linear-gradient(to right, #ffffff, #ffee00);
-    font-size: 1.2rem;
-    -webkit-transition: font-size 0.5s;
-    -o-transition: font-size 0.5s;
-    transition: font-size 0.5s;
-  }
-  
-  p.testimonialState {
+}
+
+.teamDesc {
     margin-top: -5px;
     font-size: 0.8rem;
     font-style: italic;
     color: #808080d4;
-  }
-  
-  p.testimonialFrom {
+}
+
+.teamFrom {
     margin-top: 5px;
     font-weight: bold;
     color: #33475c;
-  }
-  /* ============== End Testimonial Flexbox ============= */
-  
+}
+
+
+/* ============== End Testimonial Flexbox ============= */
+
 
 /* fin du carroussel de pierre (pas fifou)   */
