@@ -359,17 +359,7 @@ button:hover {
 
 /* carroussel de pierre (vraiment fifou) */
 
-body {
-    background: #eee;
-    font-family: Tahoma;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-top: 20px;
-}
-
-.d-block,
+.h1,
 h2 {
     color: #33475c;
     font-weight: 700;
@@ -410,8 +400,6 @@ h2 {
 }
 
 #carousel_teams {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     list-style: none;
     -ms-flex-line-pack: stretch;
