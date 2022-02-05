@@ -16,21 +16,34 @@ function showResponsiveMenu() {
     }
 }
 
-/**
- * Lancement de la fonction de parallax dès que la page a fini de charger
- */
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.addEventListener("mousemove", parallax);
-    const bg = document.querySelector("#bg");
 
-    function parallax(e) {
-        // Vitesse de déplacement des plans
-        let speed = [0.0025, 0.0040, 0.0075, 0.0200];
-        let depth = [];
-        for (let i = 0; i < speed.length; i++) {
-            depth[i] = `${50 - (e.clientX - window.innerWidth / 2) * speed[i]}% 
-            ${50 - (e.clientY - window.innerHeight / 2) * speed[i]}%`;
-        }
-        bg.style.backgroundPosition = `${depth[3]}, ${depth[2]}, ${depth[1]}, ${depth[0]}`;
-    }
+/* carroussel nul de pierre */
+
+// Makeshift carousel function that gets invoked with the Index to start it off, then the callback increments the index to recursively invoke the same function. Works even in IE11!
+var testimonialItems, time;
+var carouselDelay = 5000;
+document.addEventListener("DOMContentLoaded", function(event) {
+    testimonialItems = document.querySelectorAll(".radio_team");
+    time = setTimeout(() => autoCaroussel(0), carouselDelay);
+    pauseCaroussel();
 })
+
+function autoCaroussel(index) {
+    testimonialItems[index].checked = false;
+    index = (index + 1) % testimonialItems.length;
+    testimonialItems[index].checked = true;
+    time = setTimeout(() => autoCaroussel(index), carouselDelay);
+    pauseCaroussel();
+}
+
+function pauseCaroussel() {
+    document.getElementById("carousel_container").addEventListener("click", () => {
+        clearTimeout(time);
+        for (let i = 0; i < testimonialItems.length; i++) {
+            if (testimonialItems[i].checked == true) {
+                index = i;
+            }
+        }
+        time = setTimeout(() => autoCaroussel(index), carouselDelay);
+    })
+}
