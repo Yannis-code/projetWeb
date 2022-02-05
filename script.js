@@ -24,7 +24,6 @@ var testimonialItems, time;
 var carouselDelay = 5000;
 document.addEventListener("DOMContentLoaded", function(event) {
     testimonialItems = document.querySelectorAll(".radio_team");
-
     time = setTimeout(() => autoCaroussel(0), carouselDelay);
     pauseCaroussel();
 })
