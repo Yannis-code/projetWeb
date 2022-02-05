@@ -61,21 +61,45 @@ button:hover {
 
 /* Comportement de la parallax réactive aux dimensions de la fenêtre*/
 
-@media (min-aspect-ratio: 3/2) {
-    #bg {
-        background-size: 110% auto;
+@media (min-aspect-ratio: 1/1) {
+    @media (min-aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: 110% auto;
+        }
+    }
+    @media (max-aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: auto 110%;
+        }
+    }
+    @media (aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: 110% 110%;
+        }
     }
 }
 
-@media (max-aspect-ratio: 3/2) {
-    #bg {
-        background-size: auto 110%;
-    }
-}
 
-@media (aspect-ratio: 3/2) {
+/* Rotation du bg si la largeur devient trop petite*/
+
+@media (max-aspect-ratio: 1/1) {
     #bg {
-        background-size: 110% 110%;
+        background-image: url(src/img/dust-alt.png), url(src/img/space1-alt.png), url(src/img/dust2-alt.png), url(src/img/space2-alt.png);
+    }
+    @media (min-aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: 110% auto;
+        }
+    }
+    @media (max-aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: auto 110%;
+        }
+    }
+    @media (aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: 110% 110%;
+        }
     }
 }
 
