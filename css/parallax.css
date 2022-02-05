@@ -1,0 +1,59 @@
+/* ******************** PARALLAX ******************** */
+
+
+/* Application d'une image de fond au body */
+
+#bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(../src/img/bg/dust.png), url(../src/img/bg/space1.png), url(../src/img/bg/dust2.png), url(../src/img/bg/space2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Comportement de la parallax réactive aux dimensions de la fenêtre*/
+
+@media (min-aspect-ratio: 1/1) {
+    @media (min-aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: 110% auto;
+        }
+    }
+    @media (max-aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: auto 110%;
+        }
+    }
+    @media (aspect-ratio: 1920/1080) {
+        #bg {
+            background-size: 110% 110%;
+        }
+    }
+}
+
+
+/* Rotation du bg si la largeur devient trop petite*/
+
+@media (max-aspect-ratio: 1/1) {
+    #bg {
+        background-image: url(../src/img/bg/dust-alt.png), url(../src/img/bg/space1-alt.png), url(../src/img/bg/dust2-alt.png), url(../src/img/bg/space2-alt.png);
+    }
+    @media (min-aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: 110% auto;
+        }
+    }
+    @media (max-aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: auto 110%;
+        }
+    }
+    @media (aspect-ratio: 1080/1920) {
+        #bg {
+            background-size: 110% 110%;
+        }
+    }
+}
