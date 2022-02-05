@@ -196,7 +196,7 @@ button:hover {
 .footer_container {
     text-align: center;
     padding: 10px;
-    color: white;
+    color: black;
 }
 
 
@@ -355,3 +355,337 @@ button:hover {
         transform: rotate(-45deg);
     }
 }
+
+
+/* carroussel de pierre (vraiment fifou) */
+
+.h1,
+h2 {
+    color: #33475c;
+    font-weight: 700;
+    font-size: 2.5rem;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/* ============= Begin Testimonial Flexbox ============ */
+
+#carousel_container {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 400px;
+    height: 110vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+}
+
+#carousel_selector {
+    height: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+#carousel_teams {
+    display: flex;
+    list-style: none;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: auto;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.radio_team {
+    display: none;
+}
+
+.label_team {
+    display: block;
+    opacity: 0.5;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+
+.label_team:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.content_team {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    height: 50%;
+    width: 100%;
+    -webkit-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.content_team p {
+    max-width: 50%;
+    text-align: center;
+}
+
+#displayer_team {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    height: 50%;
+}
+
+.radio_team:checked~.content_team {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    opacity: 1;
+}
+
+@media (min-width: 480px) {
+    #carousel_container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        min-height: auto;
+        height: 400px;
+        /* position: absolute; */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    #carousel_teams {
+        border-right: 2px solid #cccccc;
+    }
+    .content_team {
+        width: 65%;
+        height: 100%;
+        pointer-events: auto;
+        transition: translateY(100%) 1s;
+    }
+    #carousel_selector {
+        width: 35%;
+    }
+    #displayer_team {
+        height: 100%;
+        width: 65%;
+    }
+}
+
+
+/* If the screen size is 480px or less */
+
+@media (max-width: 480px) {
+    .picto {
+        padding-top: 100px;
+    }
+    .label_team {
+        font-size: 1.3rem;
+    }
+}
+
+.picto {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#label_team-1:before {
+    background-image: url("src/img/logo\ team/bds.png");
+}
+
+#label_team-2:before {
+    background-image: url("src/img/logo\ team/vitality.png");
+}
+
+#label_team-3:before {
+    background-image: url("src/img/logo\ team/kcorp.png");
+}
+
+#label_team-4:before {
+    background-image: url("src/img/logo\ team/guild.png");
+}
+
+#label_team-5:before {
+    background-image: url("src/img/logo\ team/dignitas.png");
+}
+
+#picto_team-1 {
+    background-image: url("src/img/logo\ team/bds.png");
+}
+
+#picto_team-2 {
+    background-image: url("src/img/logo\ team/vitality.png");
+}
+
+#picto_team-3 {
+    background-image: url("src/img/logo\ team/kcorp.png");
+}
+
+#picto_team-4 {
+    background-image: url("src/img/logo\ team/guild.png");
+}
+
+#picto_team-5 {
+    background-image: url("src/img/logo\ team/dignitas.png");
+}
+
+#content_team-1 h1 {
+    color: rgb(238, 54, 150);
+    text-align: center;
+}
+
+#content_team-2 h1 {
+    color: #f5d76e;
+}
+
+#content_team-3 h1 {
+    color: #4235f2;
+}
+
+#content_team-4 h1 {
+    color: rgb(210, 18, 23);
+}
+
+#content_team-5 h1 {
+    color: #ffee00;
+}
+
+.radio_team:checked~.label_team {
+    opacity: 1;
+    -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.radio_team:checked~#label_team-1 {
+    color: rgb(238, 54, 150);
+    border-right: solid 4px rgb(238, 54, 150);
+}
+
+.radio_team:checked~#label_team-2 {
+    color: #f5d76e;
+    border-right: solid 4px #f5d76e;
+}
+
+.radio_team:checked~#label_team-3 {
+    color: #4235f2;
+    border-right: solid 4px #4235f2;
+}
+
+.radio_team:checked~#label_team-4 {
+    color: rgb(210, 18, 23);
+    border-right: solid 4px rgb(210, 18, 23);
+}
+
+.radio_team:checked~#label_team-5 {
+    color: #ffee00;
+    border-right: solid 4px #ffee00;
+}
+
+.label_team:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    background-position: center;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.label_team:hover {
+    font-size: 1.2rem;
+    transition: font-size 0.5s;
+}
+
+#label_team-1:hover {
+    background-image: linear-gradient(to right, #ffffff, rgb(238, 54, 150));
+}
+
+#label_team-2:hover {
+    background-image: linear-gradient(to right, #ffffff, #f5d76e);
+}
+
+#label_team-3:hover {
+    background-image: linear-gradient(to right, #ffffff, #4235f2);
+}
+
+#label_team-4:hover {
+    background-image: linear-gradient(to right, #ffffff, rgb(210, 18, 23));
+}
+
+#label_team-5:hover {
+    background-image: linear-gradient(to right, #ffffff, #ffee00);
+}
+
+.teamDesc {
+    margin-top: -5px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #808080d4;
+}
+
+.teamFrom {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #33475c;
+}
+
+
+/* ============== End Testimonial Flexbox ============= */
+
+
+/* fin du carroussel de pierre (pas fifou)   */
