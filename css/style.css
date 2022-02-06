@@ -42,6 +42,53 @@ button:hover {
     cursor: pointer;
 }
 
+#container_table-teams {
+    margin: 20px;
+    width: auto;
+    height: 400px;
+    overflow: auto;
+}
+
+#table-eSport_teams {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+#table-eSport_teams img {
+    max-height: 50px;
+    width: auto;
+}
+
+#table-eSport_teams td,
+#table-eSport_teams th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.pair {
+    background-color: rgb(255, 255, 255);
+}
+
+.pair:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.impair {
+    background-color: rgb(235, 235, 235);
+}
+
+.impair:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+#table-eSport_teams th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #000000;
+    color: white;
+}
+
 
 /* ******************** PAGE D'ACCUEIL ******************** */
 
@@ -108,6 +155,7 @@ button:hover {
 #content {
     background-color: gray;
     margin: auto;
+    padding-bottom: 50px;
     max-width: 60%;
     min-height: 100%;
 }

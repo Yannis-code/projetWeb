@@ -1,4 +1,4 @@
-let json = [{
+[{
         "nom": "00 Nation DNB",
         "id": 1,
         "zone": "Europe"
@@ -464,45 +464,3 @@ let json = [{
         "zone": "Afrique Sub-Saharienne"
     }
 ]
-
-/* carroussel nul de pierre */
-
-var testimonialItems, time;
-var carouselDelay = 5000;
-document.addEventListener("DOMContentLoaded", function(event) {
-    testimonialItems = document.querySelectorAll(".radio_team");
-    time = setTimeout(() => autoCaroussel(0), carouselDelay);
-    pauseCaroussel();
-
-    let table = document.getElementById("table-eSport_teams");
-
-    for (let i = 0; i < json.length; i++) {
-        table.innerHTML += `
-            <tr class="${(i%2)?"impair":"pair"}">
-                <td><img src="${"./src/teamCSV/img/"+json[i].id+".png"}" /></th>
-                <td>${json[i].nom}</th>
-                <td>${json[i].zone}</th>
-            </tr>`
-    }
-
-})
-
-function autoCaroussel(index) {
-    testimonialItems[index].checked = false;
-    index = (index + 1) % testimonialItems.length;
-    testimonialItems[index].checked = true;
-    time = setTimeout(() => autoCaroussel(index), carouselDelay);
-    pauseCaroussel();
-}
-
-function pauseCaroussel() {
-    document.getElementById("carousel_container").addEventListener("click", () => {
-        clearTimeout(time);
-        for (let i = 0; i < testimonialItems.length; i++) {
-            if (testimonialItems[i].checked == true) {
-                index = i;
-            }
-        }
-        time = setTimeout(() => autoCaroussel(index), carouselDelay);
-    })
-}
