@@ -467,6 +467,62 @@ let json = [{
 
 /* carroussel nul de pierre */
 
+var sortedDesc = [false, true, true];
+
+function sortTable(type) {
+    if (type == "ID") {
+        json.sort(function(a, b) {
+            return (sortedDesc[0]) ? a.id - b.id : b.id - a.id;
+        });
+        sortedDesc[0] = !sortedDesc[0];
+        sortedDesc[1] = true;
+        sortedDesc[2] = true;
+    } else if (type == "NAME") {
+        json.sort((a, b) => {
+            var a1 = a.nom.toLowerCase();
+            var b1 = b.nom.toLowerCase();
+            if (sortedDesc[1]) {
+                return a1 < b1 ? -1 : a1 > b1 ? 1 : 0;
+            } else {
+                return a1 < b1 ? 1 : a1 > b1 ? -1 : 0;
+            }
+        })
+        sortedDesc[1] = !sortedDesc[1];
+        sortedDesc[0] = true;
+        sortedDesc[2] = true;
+    } else if (type == "ZONE") {
+        json.sort((a, b) => {
+            var a1 = a.zone.toLowerCase();
+            var b1 = b.zone.toLowerCase();
+            if (sortedDesc[2]) {
+                return a1 < b1 ? -1 : a1 > b1 ? 1 : 0;
+            } else {
+                return a1 < b1 ? 1 : a1 > b1 ? -1 : 0;
+            }
+        })
+        sortedDesc[2] = !sortedDesc[2];
+        sortedDesc[1] = true;
+        sortedDesc[0] = true;
+    }
+    let table = document.getElementById("table-eSport_teams");
+
+    table.innerHTML = `
+        <tr>
+            <th onclick="sortTable('ID')">Logo d'équipe</th>
+            <th onclick="sortTable('NAME')">Nom d'équipe</th>
+            <th onclick="sortTable('ZONE')">Région</th>
+        </tr>`
+
+    for (let i = 0; i < json.length; i++) {
+        table.innerHTML += `
+            <tr class="${(i%2)?"impair":"pair"}">
+                <td><img src="${"./src/teamCSV/img/"+json[i].id+".png"}" /></th>
+                <td>${json[i].nom}</th>
+                <td>${json[i].zone}</th>
+            </tr>`
+    }
+}
+
 var testimonialItems, time;
 var carouselDelay = 5000;
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -475,6 +531,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     pauseCaroussel();
 
     let table = document.getElementById("table-eSport_teams");
+
 
     for (let i = 0; i < json.length; i++) {
         table.innerHTML += `

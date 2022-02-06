@@ -49,14 +49,7 @@
     </header>
 
     <div id="content">
-        <div class="col-sm-7 mx-auto">
-            <header class="section-header text-center">
-                <span class="h1">
-                <span>Rocket League Competitive Teams</span>
-                </span>
-                <h2>RLCSx</h2>
-            </header>
-        </div>
+        <h1>Les équipes les plus connues</h1>
         <div id="carousel_container">
             <div id="carousel_selector">
                 <ul id="carousel_teams">
@@ -123,12 +116,13 @@
             <div id="displayer_team"></div>
         </div>
 
+        <h1>Equipes Rocket League actives notables</h1>
         <div id="container_table-teams">
             <table id="table-eSport_teams">
                 <tr>
-                    <th>Logo d'équipe</th>
-                    <th>Nom d'équipe</th>
-                    <th>Région</th>
+                    <th onclick="sortTable('ID')">Logo d'équipe</th>
+                    <th onclick="sortTable('NAME')">Nom d'équipe</th>
+                    <th onclick="sortTable('ZONE')">Région</th>
                 </tr>
             </table>
         </div>

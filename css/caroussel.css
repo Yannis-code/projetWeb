@@ -127,7 +127,7 @@ h2 {
 }
 
 .content_team p {
-    max-width: 50%;
+    max-width: 80%;
     text-align: center;
 }
 
@@ -188,13 +188,13 @@ h2 {
     height: 100px;
     width: 100px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 10px;
 }
 
 #content_team-1 h1 {
     color: rgb(238, 54, 150);
-    text-align: center;
 }
 
 #content_team-2 h1 {
@@ -253,7 +253,6 @@ h2 {
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
-    border-radius: 50%;
 }
 
 .label_team:hover {

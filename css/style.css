@@ -89,6 +89,11 @@ button:hover {
     color: white;
 }
 
+#table-eSport_teams th:hover {
+    cursor: pointer;
+    background-color: #1d1d1d;
+}
+
 
 /* ******************** PAGE D'ACCUEIL ******************** */
 
