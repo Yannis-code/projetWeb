@@ -1,37 +1,18 @@
-var spaceHolder, horizontal, container, sticky;
+document.addEventListener("DOMContentLoaded", function(event) {
+    let container = document.querySelectorAll(".scrolling_caroussel");
+    let progressBar = document.querySelectorAll(".progressBar");
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    /*
-    spaceHolder = document.querySelectorAll('.space-holder');
-    horizontal = document.querySelectorAll('.horizontal');
-    container = document.querySelectorAll('.container');
-    sticky = document.querySelectorAll('.sticky');
-
-    container.forEach(function(current, i) {
-        spaceHolder[i].style.height = `${calcDynamicHeight(horizontal[i])}px`;
-        window.addEventListener('scroll', () => {
-            horizontal[i].style.transform = `translateX(-${sticky[i].offsetTop}px)`;
-        });
-        window.addEventListener('resize', () => {
-            spaceHolder[i].style.height = `${calcDynamicHeight(horizontal[i])}px`;
-        });
-    });*/
-
-    document.querySelector("container").addEventListener('scroll', function (e) {
-        derniere_position_de_scroll_connue = window.scrollY;
-
-        if (!ticking) {
-            window.requestAnimationFrame(function () {
-                faireQuelqueChose(derniere_position_de_scroll_connue);
-                ticking = false;
-            });
-        }
+    container.forEach((el, i) => {
+        el.addEventListener('wheel', function(e) {
+            if (e.deltaY != 0) {
+                e.preventDefault();
+                el.scrollLeft += e.deltaY;
+            }
+            let scroll = el.scrollLeft;
+            width = el.scrollWidth - el.offsetWidth,
+                scrolled = scroll / width * 100;
+            if (scrolled > 100) scrolled = 100;
+            progressBar[i].style.width = scrolled + "%";
+        })
     })
 })
-
-function calcDynamicHeight(ref) {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const objectWidth = ref.scrollWidth;
-    return objectWidth - vw + vh + 150;
-}
