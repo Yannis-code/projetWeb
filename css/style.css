@@ -12,15 +12,6 @@ body {
     margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: rgb(20, 20, 20);
-}
-
 button {
     color: rgba(0, 0, 0, 0.5);
     background-color: rgba(255, 255, 255, 0.5);
@@ -181,6 +172,43 @@ button:hover {
     border: rgba(0, 0, 0, 0.5) solid 1px;
     border-radius: 15px;
     padding: 5px 10px;
+}
+
+article {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+.article_linear h1,
+.article_linear h2,
+.article_linear h3,
+.article_linear h4,
+.article_linear h5,
+.article_linear h6 {
+    color: #1b1b1b;
+    margin: 10px 5px 5px 5px;
+}
+
+.article_linear p {
+    text-align: justify;
+}
+
+.article_container-img {
+    width: 100%;
+    text-align: center;
+}
+
+.article_container-img img {
+    width: 75%;
+    height: auto;
+}
+
+.label_imgLegend {
+    display: block;
+    text-align: center;
+    position: relative;
 }
 
 
