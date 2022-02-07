@@ -4,9 +4,27 @@
 }
 
 .scrolling_caroussel {
-    overflow-x: hidden;
+    overflow-x: scroll;
     display: flex;
     flex-direction: row;
+}
+
+@media only screen and (hover) {
+    .scrolling_caroussel::-webkit-scrollbar {
+        width: 10px;
+    }
+    .scrolling_caroussel::-webkit-scrollbar-track {
+        background: rgb(30, 30, 30);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb {
+        background: rgb(136, 136, 136);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb:hover {
+        background: rgb(100, 100, 100);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb:active {
+        background: rgb(68, 68, 68);
+    }
 }
 
 .card {
@@ -34,28 +52,4 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1em;
-}
-
-.progress-container {
-    background-color: rgba(150, 150, 150, 0.6);
-    height: 10px;
-    width: 100%;
-}
-
-.progressBar {
-    background-color: rgba(150, 150, 150, 1);
-    height: 10px;
-    width: 0;
-}
-
-@media only screen and (hover: none) and (pointer: coarse) {
-    .scrolling_caroussel {
-        overflow-x: scroll;
-    }
-    .progress-container {
-        display: none;
-    }
-    .progressBar {
-        display: none;
-    }
 }
