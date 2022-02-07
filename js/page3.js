@@ -1,6 +1,7 @@
 var spaceHolder, horizontal, container, sticky;
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
+    /*
     spaceHolder = document.querySelectorAll('.space-holder');
     horizontal = document.querySelectorAll('.horizontal');
     container = document.querySelectorAll('.container');
@@ -14,7 +15,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         window.addEventListener('resize', () => {
             spaceHolder[i].style.height = `${calcDynamicHeight(horizontal[i])}px`;
         });
-    });
+    });*/
+
+    document.querySelector("container").addEventListener('scroll', function (e) {
+        derniere_position_de_scroll_connue = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                faireQuelqueChose(derniere_position_de_scroll_connue);
+                ticking = false;
+            });
+        }
+    })
 })
 
 function calcDynamicHeight(ref) {

@@ -1,47 +1,21 @@
 .container {
     position: relative;
+    overflow-x: scroll;
     width: 100%;
-    min-height: 100vh;
+    height: 300px;
     background-color: aqua;
     border: #111f30 solid 3px;
-}
-
-.space-holder {
-    position: relative;
-    width: 100%;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.horizontal {
-    position: absolute;
-    height: 100%;
-    will-change: transform;
-}
-
-.cards {
-    position: relative;
-    height: 100%;
-    padding: 0 500px 0 150px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
 }
 
-.sample-card {
-    position: relative;
-    height: 300px;
-    width: 500px;
-    background-color: #111f30;
-    background-image: url("https://picsum.photos/id/1060/600/400");
+.card{
+    margin-left: 50px;
+    background-color: blueviolet;
+    background-image: url("https://picsum.photos/id/1081/600/400");
+    min-width: 75%;
+    min-height: 100%;
+    height: auto;
     background-size: contain;
-    margin-right: 75px;
-    flex-shrink: 0;
+    background-repeat: no-repeat;
 }
