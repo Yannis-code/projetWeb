@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/caroussel.css">
 
     <script src="js/script.js"></script>
@@ -44,98 +45,93 @@
         </div>
     </div>
 
-    <header id="content_header">
-        <img class="content_header_img" src="src/img/championship.jpg" alt="">
+    <header>
+        <img src="src/img/championship.jpg" alt="">
     </header>
 
-    <div id="content">
-        <h1>Les équipes les plus connues</h1>
-        <div id="carousel_container">
-            <div id="carousel_selector">
-                <ul id="carousel_teams">
-                    <li class="li_team">
-                        <input type="radio" class="radio_team" id="radio_team-1" name="basic_carousel" checked />
-                        <label class="label_team" id="label_team-1" for="radio_team-1">BDS</label>
-                        <div class="content_team" id="content_team-1">
-                            <span class="picto" id="picto_team-1"></span>
-                            <h1>BDS</h1>
-                            <p>“The team really takes pride in their work. If I didn’t know any better I would think
-                                they actually worked for my company.”</p>
-                            <p class="teamFrom">Patrice Bailo De Spoelberch, CEO</p>
-                            <p class="teamDesc"> Suisse </p>
-                        </div>
-                    </li>
-                    <li class="li_team">
-                        <input type="radio" class="radio_team" id="radio_team-2" name="basic_carousel" />
-                        <label class="label_team" id="label_team-2" for="radio_team-2">Vitality</label>
-                        <div class="content_team" id="content_team-2">
-                            <span class="picto" id="picto_team-2"></span>
-                            <h1>Vitality</h1>
-                            <p>“Quite simply… the service offers prompt response time to my visitors and helps me to
-                                better know what type of project a potential customer wants.”</p>
-                            <p class="teamFrom">Nicolas Maurer, CEO</p>
-                            <p class="teamDesc">France</p>
-                            <br>
-                        </div>
-                    </li>
-                    <li class="li_team">
-                        <input type="radio" class="radio_team" id="radio_team-3" name="basic_carousel" />
-                        <label class="label_team" id="label_team-3" for="radio_team-3">Karmin Corp</label>
-                        <div class="content_team" id="content_team-3">
-                            <span class="picto" id="picto_team-3"></span>
-                            <h1>Karmin Corp</h1>
-                            <p>“I couldn’t believe it. I actually had to hire someone to help me keep up with the new
-                                business. I had no idea my website had so much value.”</p>
-                            <p class="teamFrom">Kameto, CEO</p>
-                            <p class="teamDesc">France</p>
-                        </div>
-                    </li>
-                    <li class="li_team">
-                        <input type="radio" class="radio_team" id="radio_team-4" name="basic_carousel" />
-                        <label class="label_team" id="label_team-4" for="radio_team-4">Guild Esport</label>
-                        <div class="content_team" id="content_team-4">
-                            <span class="picto" id="picto_team-4"></span>
-                            <h1>Guild Esport</h1>
-                            <p>Great company to send leads. Very efficient and pleased with the services. We get lots of
-                                leads and that whats important. Support is also great from the managers/support. Thanks
-                                YPC Chat</p>
-                            <p class="teamFrom">Kalum Lee Hourd, CEO</p>
-                            <p class="teamDesc">United Kingdom</p>
-                            <br>
-                        </div>
-                    </li>
-                    <li class="li_team">
-                        <input type="radio" class="radio_team" id="radio_team-5" name="basic_carousel" />
-                        <label class="label_team" id="label_team-5" for="radio_team-5">Dignitas</label>
-                        <div class="content_team" id="content_team-5">
-                            <span class="picto" id="picto_team-5"></span>
-                            <h1>Dignitas</h1>
-                            <p>Great company to send leads. Very efficient and pleased with the services. We get lots of
-                                leads and that whats important. Support is also great from the managers/support. Thanks
-                                YPC Chat</p>
-                            <p class="teamFrom">Michael Prindiville, CEO</p>
-                            <p class="teamDesc">U.S.A.</p>
-                            <br>
-                        </div>
-                    </li>
-                </ul>
+    <main>
+        <article class="article_linear">
+            <h3>Les équipes les plus connues</h3>
+            <div id="carousel_container">
+                <div id="carousel_selector">
+                    <ul id="carousel_teams">
+                        <li class="li_team">
+                            <input type="radio" class="radio_team" id="radio_team-1" name="basic_carousel" checked />
+                            <label class="label_team" id="label_team-1" for="radio_team-1">BDS</label>
+                            <div class="content_team" id="content_team-1">
+                                <span class="picto" id="picto_team-1"></span>
+                                <h1>BDS</h1>
+                                <p>“The team really takes pride in their work. If I didn’t know any better I would think they actually worked for my company.”</p>
+                                <p class="teamFrom">Patrice Bailo De Spoelberch, CEO</p>
+                                <p class="teamDesc"> Suisse </p>
+                            </div>
+                        </li>
+                        <li class="li_team">
+                            <input type="radio" class="radio_team" id="radio_team-2" name="basic_carousel" />
+                            <label class="label_team" id="label_team-2" for="radio_team-2">Vitality</label>
+                            <div class="content_team" id="content_team-2">
+                                <span class="picto" id="picto_team-2"></span>
+                                <h1>Vitality</h1>
+                                <p>“Quite simply… the service offers prompt response time to my visitors and helps me to better know what type of project a potential customer wants.”</p>
+                                <p class="teamFrom">Nicolas Maurer, CEO</p>
+                                <p class="teamDesc">France</p>
+                                <br>
+                            </div>
+                        </li>
+                        <li class="li_team">
+                            <input type="radio" class="radio_team" id="radio_team-3" name="basic_carousel" />
+                            <label class="label_team" id="label_team-3" for="radio_team-3">Karmin Corp</label>
+                            <div class="content_team" id="content_team-3">
+                                <span class="picto" id="picto_team-3"></span>
+                                <h1>Karmin Corp</h1>
+                                <p>“I couldn’t believe it. I actually had to hire someone to help me keep up with the new business. I had no idea my website had so much value.”</p>
+                                <p class="teamFrom">Kameto, CEO</p>
+                                <p class="teamDesc">France</p>
+                            </div>
+                        </li>
+                        <li class="li_team">
+                            <input type="radio" class="radio_team" id="radio_team-4" name="basic_carousel" />
+                            <label class="label_team" id="label_team-4" for="radio_team-4">Guild Esport</label>
+                            <div class="content_team" id="content_team-4">
+                                <span class="picto" id="picto_team-4"></span>
+                                <h1>Guild Esport</h1>
+                                <p>Great company to send leads. Very efficient and pleased with the services. We get lots of leads and that whats important. Support is also great from the managers/support. Thanks YPC Chat</p>
+                                <p class="teamFrom">Kalum Lee Hourd, CEO</p>
+                                <p class="teamDesc">United Kingdom</p>
+                                <br>
+                            </div>
+                        </li>
+                        <li class="li_team">
+                            <input type="radio" class="radio_team" id="radio_team-5" name="basic_carousel" />
+                            <label class="label_team" id="label_team-5" for="radio_team-5">Dignitas</label>
+                            <div class="content_team" id="content_team-5">
+                                <span class="picto" id="picto_team-5"></span>
+                                <h1>Dignitas</h1>
+                                <p>Great company to send leads. Very efficient and pleased with the services. We get lots of leads and that whats important. Support is also great from the managers/support. Thanks YPC Chat</p>
+                                <p class="teamFrom">Michael Prindiville, CEO</p>
+                                <p class="teamDesc">U.S.A.</p>
+                                <br>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="displayer_team"></div>
             </div>
-            <div id="displayer_team"></div>
-        </div>
 
-        <h1>Equipes Rocket League actives notables</h1>
-        <div id="container_table-teams">
-            <table id="table-eSport_teams">
-                <tr>
-                    <th onclick="sortTable('ID')">Logo d'équipe</th>
-                    <th onclick="sortTable('NAME')">Nom d'équipe</th>
-                    <th onclick="sortTable('ZONE')">Région</th>
-                </tr>
-            </table>
-        </div>
-    </div>
+            <h3>Equipes Rocket League actives notables</h3>
+            <div id="container_table-teams">
+                <table id="table-eSport_teams">
+                    <tr>
+                        <th onclick="sortTable('ID')">Logo d'équipe</th>
+                        <th onclick="sortTable('NAME')">Nom d'équipe</th>
+                        <th onclick="sortTable('ZONE')">Région</th>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </main>
 
-    <footer class="footer_container ">
+    <footer>
         <p>P. BOUTERIGE, Y. ROCHE - 2022</p>
     </footer>
 </body>

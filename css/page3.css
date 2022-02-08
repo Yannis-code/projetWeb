@@ -1,47 +1,56 @@
-.container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background-color: aqua;
-    border: #111f30 solid 3px;
+.scrolling_caroussel_container {
+    padding: 0;
+    background-color: rgb(0, 0, 0);
 }
 
-.space-holder {
-    position: relative;
-    width: 100%;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.horizontal {
-    position: absolute;
-    height: 100%;
-    will-change: transform;
-}
-
-.cards {
-    position: relative;
-    height: 100%;
-    padding: 0 500px 0 150px;
+.scrolling_caroussel {
+    overflow-x: scroll;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
 }
 
-.sample-card {
-    position: relative;
-    height: 300px;
-    width: 500px;
-    background-color: #111f30;
-    background-image: url("https://picsum.photos/id/1060/600/400");
+@media only screen and (hover) {
+    .scrolling_caroussel::-webkit-scrollbar {
+        width: 10px;
+    }
+    .scrolling_caroussel::-webkit-scrollbar-track {
+        background: rgb(30, 30, 30);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb {
+        background: rgb(136, 136, 136);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb:hover {
+        background: rgb(100, 100, 100);
+    }
+    .scrolling_caroussel::-webkit-scrollbar-thumb:active {
+        background: rgb(68, 68, 68);
+    }
+}
+
+.card {
+    margin: 0 0 0 10px;
     background-size: contain;
-    margin-right: 75px;
-    flex-shrink: 0;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card:last-child {
+    margin-right: 10px;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+}
+
+.card figcaption {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    word-break: keep-all;
 }

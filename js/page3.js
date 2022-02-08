@@ -1,25 +1,24 @@
-var spaceHolder, horizontal, container, sticky;
-
 document.addEventListener("DOMContentLoaded", function(event) {
-    spaceHolder = document.querySelectorAll('.space-holder');
-    horizontal = document.querySelectorAll('.horizontal');
-    container = document.querySelectorAll('.container');
-    sticky = document.querySelectorAll('.sticky');
+    let hasTouch;
+    if ('ontouchstart' in document.documentElement) {
+        document.documentElement.classList.add('touch');
+        hasTouch = true;
+    } else {
+        document.documentElement.classList.add('no-touch');
+        hasTouch = false;
+    }
 
-    container.forEach(function(current, i) {
-        spaceHolder[i].style.height = `${calcDynamicHeight(horizontal[i])}px`;
-        window.addEventListener('scroll', () => {
-            horizontal[i].style.transform = `translateX(-${sticky[i].offsetTop}px)`;
-        });
-        window.addEventListener('resize', () => {
-            spaceHolder[i].style.height = `${calcDynamicHeight(horizontal[i])}px`;
-        });
-    });
+    let container = document.querySelectorAll(".scrolling_caroussel");
+
+    if (!hasTouch) {
+        container.forEach((el, i) => {
+            if (el.scrollWidth - el.offsetWidth <= 0) el.style.overflowX = "hidden";
+            el.addEventListener('wheel', function(e) {
+                if (e.deltaY != 0) {
+                    e.preventDefault();
+                    el.scrollLeft += e.deltaY;
+                }
+            })
+        })
+    }
 })
-
-function calcDynamicHeight(ref) {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const objectWidth = ref.scrollWidth;
-    return objectWidth - vw + vh + 150;
-}
