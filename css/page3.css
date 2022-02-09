@@ -11,19 +11,27 @@
 
 @media only screen and (hover) {
     .scrolling_caroussel::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
+        height: 5px;
     }
     .scrolling_caroussel::-webkit-scrollbar-track {
         background: rgb(30, 30, 30);
     }
     .scrolling_caroussel::-webkit-scrollbar-thumb {
-        background: rgb(136, 136, 136);
+        background: rgb(160, 160, 160);
+        border-radius: 5px;
     }
     .scrolling_caroussel::-webkit-scrollbar-thumb:hover {
-        background: rgb(100, 100, 100);
+        background: rgb(150, 150, 150);
     }
     .scrolling_caroussel::-webkit-scrollbar-thumb:active {
-        background: rgb(68, 68, 68);
+        background: rgb(100, 100, 100);
+    }
+    @supports(scrollbar-color: rgb(100, 100, 100) rgb(100, 100, 100)) {
+        .scrolling_caroussel {
+            scrollbar-color: rgb(160, 160, 160) rgb(30, 30, 30);
+            scrollbar-width: thin;
+        }
     }
 }
 
