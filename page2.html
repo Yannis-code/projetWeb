@@ -13,6 +13,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/page2.js"></script>
+    <script src="js/page3.js"></script>
 </head>
 
 <body>
@@ -52,70 +53,112 @@
     <main>
         <article class="article_linear">
             <h3>Les équipes les plus connues</h3>
-            <div id="carousel_container">
-                <div id="carousel_selector">
-                    <ul id="carousel_teams">
-                        <li class="li_team">
-                            <input type="radio" class="radio_team" id="radio_team-1" name="basic_carousel" checked />
-                            <label class="label_team" id="label_team-1" for="radio_team-1">BDS</label>
-                            <div class="content_team" id="content_team-1">
-                                <span class="picto" id="picto_team-1"></span>
-                                <h1>BDS</h1>
-                                <p>“The team really takes pride in their work. If I didn’t know any better I would think they actually worked for my company.”</p>
-                                <p class="teamFrom">Patrice Bailo De Spoelberch, CEO</p>
-                                <p class="teamDesc"> Suisse </p>
-                            </div>
-                        </li>
-                        <li class="li_team">
-                            <input type="radio" class="radio_team" id="radio_team-2" name="basic_carousel" />
-                            <label class="label_team" id="label_team-2" for="radio_team-2">Vitality</label>
-                            <div class="content_team" id="content_team-2">
-                                <span class="picto" id="picto_team-2"></span>
-                                <h1>Vitality</h1>
-                                <p>“Quite simply… the service offers prompt response time to my visitors and helps me to better know what type of project a potential customer wants.”</p>
-                                <p class="teamFrom">Nicolas Maurer, CEO</p>
-                                <p class="teamDesc">France</p>
-                                <br>
-                            </div>
-                        </li>
-                        <li class="li_team">
-                            <input type="radio" class="radio_team" id="radio_team-3" name="basic_carousel" />
-                            <label class="label_team" id="label_team-3" for="radio_team-3">Karmin Corp</label>
-                            <div class="content_team" id="content_team-3">
-                                <span class="picto" id="picto_team-3"></span>
-                                <h1>Karmin Corp</h1>
-                                <p>“I couldn’t believe it. I actually had to hire someone to help me keep up with the new business. I had no idea my website had so much value.”</p>
-                                <p class="teamFrom">Kameto, CEO</p>
-                                <p class="teamDesc">France</p>
-                            </div>
-                        </li>
-                        <li class="li_team">
-                            <input type="radio" class="radio_team" id="radio_team-4" name="basic_carousel" />
-                            <label class="label_team" id="label_team-4" for="radio_team-4">Guild Esport</label>
-                            <div class="content_team" id="content_team-4">
-                                <span class="picto" id="picto_team-4"></span>
-                                <h1>Guild Esport</h1>
-                                <p>Great company to send leads. Very efficient and pleased with the services. We get lots of leads and that whats important. Support is also great from the managers/support. Thanks YPC Chat</p>
-                                <p class="teamFrom">Kalum Lee Hourd, CEO</p>
-                                <p class="teamDesc">United Kingdom</p>
-                                <br>
-                            </div>
-                        </li>
-                        <li class="li_team">
-                            <input type="radio" class="radio_team" id="radio_team-5" name="basic_carousel" />
-                            <label class="label_team" id="label_team-5" for="radio_team-5">Dignitas</label>
-                            <div class="content_team" id="content_team-5">
-                                <span class="picto" id="picto_team-5"></span>
-                                <h1>Dignitas</h1>
-                                <p>Great company to send leads. Very efficient and pleased with the services. We get lots of leads and that whats important. Support is also great from the managers/support. Thanks YPC Chat</p>
-                                <p class="teamFrom">Michael Prindiville, CEO</p>
-                                <p class="teamDesc">U.S.A.</p>
-                                <br>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="scrolling_caroussel_container">
+                <div class="scrolling_caroussel" id="carousel_fullpage">
+                    <article class="card card_caroussel_fullpage">
+                        <figure>
+                            <img src="src/img/logo team/bds.png" alt="">
+                            <figcaption>BDS</figcaption>
+                        </figure>
+                        <ul id="puce">
+                            <li>
+                                Présent sur la league challenger de R6
+                            </li>
+                            <li>
+                                Organisateur tournoi 10K$ sur fortnite
+                            </li>
+                            <li>
+                                L’annonce d’une Gaming House à Genève
+                            </li>
+                            <li>
+                                Double champion du monde rocket league
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="card card_caroussel_fullpage">
+                        <figure>
+                            <img src="src/img/logo team/vitality.png" alt="">
+                            <figcaption>Vitality</figcaption>
+                        </figure>
+                        <ul id="puce">
+                            <li>
+                                Premier Club E-sport en France
+                            </li>
+                            <li>
+                                Plus de 100 titres remportés
+                            </li>
+                            <li>
+                                Présent sur 8 scènes comptétitives
+                            </li>
+                            <li>
+                                4 Millions de $ de cash prize remportés
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="card card_caroussel_fullpage">
+                        <figure>
+                            <img src="src/img/logo team/kcorp.png" alt="">
+                            <figcaption>Karmine Corp.</figcaption>
+                        </figure>
+                        <ul id="puce">
+                            <li>
+                                Doublé historique en LFL
+                            </li>
+                            <li>
+                                Présent sur de nombreuses scènes
+                            </li>
+                            <li>
+                                Fan base ENORME
+                            </li>
+                            <li>
+                                Kameto
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="card card_caroussel_fullpage">
+                        <figure>
+                            <img src="src/img/logo team/guild.png" alt="">
+                            <figcaption>Guild Esport</figcaption>
+                        </figure>
+                        <ul id="puce">
+                            <li>
+                                valorisation de 50 Millions de £
+                            </li>
+                            <li>
+                                top équipes Fifa, fortine, Rocket
+                            </li>
+                            <li>
+                                côté en bourse
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="card card_caroussel_fullpage">
+                        <figure>
+                            <img src="src/img/logo team/Dignitas.png" alt="">
+                            <figcaption>Dignitas</figcaption>
+                        </figure>
+                        <ul>
+                            <li>
+                                Champion du monde en Saison 5
+                            </li>
+                            <li>
+                                Equipe e-sport internationnal
+                            </li>
+                            <li>
+                                Titre sur différentes scène
+                            </li>
+                            <li>
+                                Equipe Créé en 2003
+                            </li>
+                        </ul>
+                    </article>
                 </div>
-                <div id="displayer_team"></div>
+                <button class="caroussel_button caroussel_button_prev">
+                    &#8249;
+                </button>
+                <button class="caroussel_button caroussel_button_next">
+                    &#8250;
+                </button>
             </div>
 
             <h3>Equipes Rocket League actives notables</h3>
