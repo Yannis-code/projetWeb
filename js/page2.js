@@ -541,7 +541,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 <td>${json[i].zone}</th>
             </tr>`
     }
-
 })
 
 function autoCaroussel(index) {
