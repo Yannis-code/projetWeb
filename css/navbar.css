@@ -144,9 +144,6 @@
     /* the first span rotates 45° \ */
     #topnav_hamburger_icon.open span:nth-child(1) {
         width: 110%;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
         transform: rotate(45deg);
     }
     /* the second span disappears */
@@ -157,9 +154,6 @@
     /* the last span rotates -45° / */
     #topnav_hamburger_icon.open span:nth-child(3) {
         width: 110%;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
 }

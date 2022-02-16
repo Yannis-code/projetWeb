@@ -139,7 +139,7 @@ h2 {
 
 .radio_team:checked~.content_team {
     transform: translateY(0%);
-    transition: translateY(0%) 1s;
+    transition: transform 1s;
     opacity: 1;
 }
 
@@ -160,8 +160,8 @@ h2 {
     .content_team {
         width: 65%;
         height: 100%;
-        pointer-events: auto;
-        transition: translateY(100%) 1s;
+        transform: translateY(100%);
+        transition: transform 1s;
     }
     #carousel_selector {
         width: 35%;
