@@ -203,3 +203,46 @@ h6 {
         }
     }
 }
+
+#puce {
+    font-size: 0.85em;
+}
+
+.cadre_accueil{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: 3px solid;
+    border-radius: 15px;
+    text-align: center;
+    color: darkgray;
+
+    border-color: rgba(225, 225, 225,0.8);
+}
+
+#cadre_accueil1{
+    right: 8%;
+    bottom: 10%;
+    background-color: rgba(0, 0, 139, .30);
+} 
+
+
+#cadre_accueil2{
+    left: 8%;
+    top: 10%;
+    background-color: rgba(139, 0, 0, 0.30);
+}
+
+a.button{
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 20%;
+    right: 37%;
+    width: 25%;
+    height: 14%;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
