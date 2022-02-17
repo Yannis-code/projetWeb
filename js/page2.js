@@ -526,9 +526,6 @@ function sortTable(type) {
 var testimonialItems, time;
 var carouselDelay = 8000;
 document.addEventListener("DOMContentLoaded", function(event) {
-    testimonialItems = document.querySelectorAll(".radio_team");
-    time = setTimeout(() => autoCaroussel(0), carouselDelay);
-    pauseCaroussel();
 
     let table = document.getElementById("table-eSport_teams");
 
