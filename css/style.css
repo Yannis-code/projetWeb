@@ -13,6 +13,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-image: url(../src/img/bg/fond_rl_site.webp);
+    background-attachment:fixed;
 }
 
 header {
@@ -49,7 +51,7 @@ footer {
     order: 4;
     text-align: center;
     padding: 10px;
-    color: black;
+    color: rgb(252, 252, 252);
 }
 
 h1,
@@ -88,6 +90,7 @@ h6 {
 
 .p-content {
     text-align: justify;
+    font-size: 25px;
 }
 
 .article-img_container {
@@ -206,4 +209,23 @@ h6 {
 
 #puce {
     font-size: 0.85em;
+}
+
+/* Table des Matieres*/
+
+#toc_container {
+    font-size: 150%;
+    display: table;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: 90%;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
 }

@@ -38,12 +38,10 @@
 }
 
 a.button{
-    position: absolute;
+    position: sticky;
     font-size: small;
     text-align: center;
     vertical-align: middle;
-    bottom: 20%;
-    right: 37%;
     width: 60px;
     height: 25px;
     padding: 5px 10px;
