@@ -13,6 +13,62 @@
     background-position: center;
 }
 
+/* Cadres de la page d'accueil */
+
+.cadre_accueil{
+    position: absolute;
+    border: 3px solid;
+    border-radius: 15px;
+    text-align: center;
+    color: darkgray;
+    padding-bottom: 10%;
+
+    border-color: rgba(225, 225, 225,0.8);
+}
+
+#cadre_accueil1{
+    bottom: 10%;
+    background-color: rgba(0, 0, 139, .30);
+} 
+
+
+#cadre_accueil2{
+    top: 10%;
+    background-color: rgba(139, 0, 0, 0.30);
+}
+
+a.button{
+    position: absolute;
+    font-size: small;
+    text-align: center;
+    vertical-align: middle;
+    bottom: 20%;
+    right: 37%;
+    width: 60px;
+    height: 25px;
+    padding: 5px 10px;
+
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px black solid;
+}
+
+a.button:hover{
+    background-color: rgba(0, 0, 0, .8);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a.button:visited{
+    color: white;
+    text-decoration: none;
+}
+
+a.button:active{
+    background-color: rgba(0, 0, 0, 1);
+}
+
 
 /* Comportement de la parallax réactive aux dimensions de la fenêtre*/
 
@@ -31,6 +87,24 @@
         #bg {
             background-size: 110% 110%;
         }
+    }
+
+    .cadre_accueil{
+        width: 25%;
+        height: 25%;
+    }
+
+    #cadre_accueil1{
+        right: 8%;
+    } 
+
+
+    #cadre_accueil2{
+        left: 8%;
+    }
+
+    a.button{
+        bottom: 20%;
     }
 }
 
@@ -55,5 +129,23 @@
         #bg {
             background-size: 110% 110%;
         }
+    }
+
+    .cadre_accueil{
+        width: 50%;
+        min-height: 15%;
+    }
+
+    #cadre_accueil1{
+        left: 8%;
+    } 
+
+
+    #cadre_accueil2{
+        right: 8%;
+    }
+
+    a.button{
+        bottom: 5%;
     }
 }
