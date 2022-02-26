@@ -55,6 +55,17 @@ footer {
     color: rgb(252, 252, 252);
 }
 
+iframe{
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#box{
+text-align: center;
+margin: auto;
+}
+
 h1,
 h2,
 h3,
@@ -122,7 +133,7 @@ h6 {
     }
     /* Le contenue fait toute la largeur de la page*/
     main {
-        background-color: gray;
+        background-color: rgb(247, 244, 244);
         margin: auto;
         max-width: 100%;
     }
