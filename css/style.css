@@ -195,7 +195,7 @@ h6 {
 }
 
 
-/* ******************** Crossbar ******************** */
+/* ******************** Scrollbar ******************** */
 
 @media only screen and (hover) {
      ::-webkit-scrollbar {
@@ -230,12 +230,13 @@ h6 {
 
 /* Table des Matieres*/
 
-#toc_container {
-    font-size: 150%;
-    display: table;
-    margin-bottom: 1em;
-    padding: 20px;
-    width: 90%;
+aside {
+    z-index: 10;
+    background-color: aqua;
+    transform: translateY(-50%);
+    position: fixed;
+    top: 50%;
+    max-width: 20%;
 }
 
 .toc_title {
@@ -245,4 +246,41 @@ h6 {
 
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: outside none none !important;
+}
+
+#hamburger_icon {
+    z-index: 10;
+    position: fixed;
+    top: -100%;
+    font-size: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    #hamburger_icon {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: left 0.5s;
+    }
+    #hamburger_icon.open {
+        left: 250px;
+        transition: left 0.5s;
+    }
+
+    aside {
+        left: -100%;
+    }
+
+    #toc_container {
+        content: "&#8250;";
+        left: -250px;
+        max-width: inherit;
+        width: 250px;
+        transition: left 0.5s;
+    }
+    #toc_container.open {
+        content: "&#8249;";
+        left: 0;
+        transition: left 0.5s;
+    }
 }
