@@ -19,23 +19,24 @@
         <img src = "src/img/logo_rl.png" alt="rocket logo" >
     </header>
 
+    <aside id="myAside">
+        <p class="toc_title">Sommaire</p>
+        <ul class="toc_list">
+            <li><a href="#pdj" onclick="showAside()">1 Principe du jeu</a></li>
+            <li><a href="#partie" onclick="showAside()">2 Partie</a>
+                <ul>
+                    <li><a href="#compet" onclick="showAside()">2.1 Compétitif</a></li>
+                    <li><a href="#occa" onclick="showAside()">2.2 Occasionnel</a></li>
+                </ul>
+            </li>
+            <li><a href="#train" onclick="showAside()">3 Entrainement</a></li>
+            <li><a href="#pltfm" onclick="showAside()">4 Plateforme</a></li>
+            <li><a href="#dev" onclick="showAside()">5 developpement</a></li>
+        </ul>
+    </aside>
+
     <main>
         <article class="article_linear">
-            <div id="toc_container">
-                <p class="toc_title">Sommaire</p>
-                <ul class="toc_list">
-                    <li><a href="#pdj">1 Principe du jeu</a></li>
-                    <li><a href="#partie">2 Partie</a>
-                        <ul>
-                            <li><a href="#compet">2.1 Compétitif</a></li>
-                            <li><a href="#occa">2.2 Occasionnel</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#train">3 Entrainement</a></li>
-                    <li><a href="#pltfm">4 Plateforme</a></li>
-                    <li><a href="#dev">5 developpement</a></li>
-                </ul>
-            </div>
             <h1 id="pdj">Principe du jeu</h1>
             <p class="p-content">
                 Rocket League est un mélange de jeu de voiture et de jeu de football. Par équipe ou en solo, le joueur
@@ -156,6 +157,8 @@
             </nav>
         </div>
     </div>
+
+    <button id="hamburger_icon" onclick="showAside()">&#8250;</button>
 
     <footer>
         <p>P. BOUTERIGE, Y. ROCHE - 2022</p>

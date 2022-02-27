@@ -15,3 +15,15 @@ function showResponsiveMenu() {
         root.style.overflowY = "";
     }
 }
+
+function showAside() {
+    var aside = document.getElementById("myAside");
+    var btn = document.getElementById("hamburger_icon");
+    if (aside.className === "") {
+        aside.className = "open";
+        btn.className = "open";
+    } else {
+        aside.className = "";
+        btn.className = "";
+    }
+}
