@@ -56,8 +56,9 @@ footer {
 }
 
 iframe{
-    width: 400px;
-    height: 300px;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 16/9;
     border-radius: 5px;
 }
 
@@ -74,6 +75,7 @@ h5,
 h6 {
     color: #1b1b1b;
     margin: 10px 5px 5px 5px;
+    word-wrap: break-word;
 }
 
 h1 {
@@ -230,40 +232,68 @@ h6 {
 
 /* Table des Matieres*/
 
-aside {
+#toc_container {
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 5px;
+    justify-content: center;
     z-index: 10;
-    background-color: aqua;
-    transform: translateY(-50%);
-    position: fixed;
     top: 50%;
-    max-width: 20%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 17%;
+    padding: 10px 0;
+    transition: left 0.5s;
 }
 
-.toc_title {
+#toc_title {
+    font-size: 1em;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
 }
 
-#toc_container li, #toc_container ul, #toc_container ul li{
-    list-style: outside none none !important;
+#toc_list,
+#toc_list ul {
+    list-style: none;
+    margin: 0 0 0 10px;
+    padding: 2px 0 2px 7px;
 }
 
-#hamburger_icon {
+#toc_container a{
+    text-decoration: none;
+    font-size: 1em;
+    color: #000000;
+}
+
+#toc_container a:visited{
+    color: #000000;
+}
+
+#show_aside_button {
+    background-color: rgba(255, 255, 255, 1);
+    border: solid black 1px;
+    border-radius: 5px;
+    font-size: 2em;
     z-index: 10;
     position: fixed;
-    top: -100%;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    transition: all 0.5s;
     font-size: 2em;
 }
 
 @media only screen and (max-width: 768px) {
-    #hamburger_icon {
+    #show_aside_button {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        transition: left 0.5s;
+        transition: all 0.5s;
     }
-    #hamburger_icon.open {
-        left: 250px;
+    #show_aside_button.open {
+        left: 200px;
         transition: left 0.5s;
     }
 
@@ -273,14 +303,15 @@ aside {
 
     #toc_container {
         content: "&#8250;";
-        left: -250px;
+        left: -205px;
         max-width: inherit;
-        width: 250px;
+        min-width: 200px;
+        transform: translate(0, -50%);
         transition: left 0.5s;
     }
     #toc_container.open {
         content: "&#8249;";
-        left: 0;
+        left: -5px;
         transition: left 0.5s;
     }
 }

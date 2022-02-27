@@ -523,8 +523,6 @@ function sortTable(type) {
     }
 }
 
-var testimonialItems, time;
-var carouselDelay = 8000;
 document.addEventListener("DOMContentLoaded", function(event) {
 
     let table = document.getElementById("table-eSport_teams");
@@ -539,23 +537,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
             </tr>`
     }
 })
-
-function autoCaroussel(index) {
-    testimonialItems[index].checked = false;
-    index = (index + 1) % testimonialItems.length;
-    testimonialItems[index].checked = true;
-    time = setTimeout(() => autoCaroussel(index), carouselDelay);
-    pauseCaroussel();
-}
-
-function pauseCaroussel() {
-    document.getElementById("carousel_container").addEventListener("click", () => {
-        clearTimeout(time);
-        for (let i = 0; i < testimonialItems.length; i++) {
-            if (testimonialItems[i].checked == true) {
-                index = i;
-            }
-        }
-        time = setTimeout(() => autoCaroussel(index), carouselDelay);
-    })
-}

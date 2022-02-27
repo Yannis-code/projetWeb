@@ -10,28 +10,23 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
 
-    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/page1.js"></script>
 </head>
 
 <body>
-
-    <header>
-        <img src = "src/img/page1/logo_rl.png" alt="rocket logo" >
-    </header>
-
     <aside id="toc_container">
-        <p class="toc_title">Sommaire</p>
-        <ul class="toc_list">
-            <li><a href="#pdj" onclick="showAside()">1 Principe du jeu</a></li>
-            <li><a href="#partie" onclick="showAside()">2 Partie</a>
+        <h1 id="toc_title">Sommaire</h1>
+        <ul id="toc_list">
+            <li><a href="#pdj" onclick="showAside(true)">Principe du jeu</a></li>
+            <li><a href="#partie" onclick="showAside(true)">Partie</a>
                 <ul>
-                    <li><a href="#compet" onclick="showAside()">2.1 Compétitif</a></li>
-                    <li><a href="#occa" onclick="showAside()">2.2 Occasionnel</a></li>
+                    <li><a href="#compet" onclick="showAside()">Compétitif</a></li>
+                    <li><a href="#occa" onclick="showAside(true)">Occasionnel</a></li>
                 </ul>
             </li>
-            <li><a href="#train" onclick="showAside()">3 Entrainement</a></li>
-            <li><a href="#pltfm" onclick="showAside()">4 Plateforme</a></li>
-            <li><a href="#dev" onclick="showAside()">5 developpement</a></li>
+            <li><a href="#train" onclick="showAside(true)">Entrainement</a></li>
+            <li><a href="#pltfm" onclick="showAside(true)">Plateforme</a></li>
         </ul>
     </aside>
 
@@ -48,11 +43,14 @@
                 repositionner. Pour recharger sa jauge de boost, le joueur récupère des capsules (situées aux abords du terrain) ou
                 sur des palettes éparpillées sur le terrain. 
             </p>
-            <div id="box">
-                <iframe src="https://www.youtube.com/embed/SgSX3gOrj60" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <figure class="article-img_container">
+                <iframe src="https://www.youtube.com/embed/SgSX3gOrj60"
+                        title="YouTube video player"
+                        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
                 </iframe>
-            </div>
+                <figcaption>Vidéo de présentation du jeu</figcaption>
+            </figure>
             <p class="p-content">
                 Le joueur peut personnaliser son véhicule avec divers objets classés en dix types (<a href="page3.html">châssis</a>, stickers, peintures, roues,
                 turbos, accessoires, antennes, explosions de but, traînées et bruits de moteur). Les objets n'influent pas sur les caractéristiques
@@ -137,7 +135,11 @@
         </div>
     </div>
 
-    <button id="hamburger_icon" onclick="showAside()">&#8250;</button>
+    <header>
+        <img src = "src/img/page1/logo_rl.png" alt="rocket logo" >
+    </header>
+
+    <button id="show_aside_button" onclick="showAside()">&#8250;</button>
 
     <footer>
         <p>P. BOUTERIGE, Y. ROCHE - 2022</p>
