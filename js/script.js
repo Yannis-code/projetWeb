@@ -17,13 +17,15 @@ function showResponsiveMenu() {
 }
 
 function showAside() {
-    var aside = document.getElementById("myAside");
+    var aside = document.getElementById("toc_container");
     var btn = document.getElementById("hamburger_icon");
     if (aside.className === "") {
         aside.className = "open";
         btn.className = "open";
+        btn.innerHTML = "&#8249;"
     } else {
         aside.className = "";
         btn.className = "";
+        btn.innerHTML = "&#8250;"
     }
 }

@@ -214,9 +214,9 @@ h6 {
 /* Table des Matieres*/
 
 aside {
+    z-index: 10;
     background-color: aqua;
     transform: translateY(-50%);
-    order: 3;
     position: fixed;
     top: 50%;
     max-width: 20%;
@@ -232,6 +232,7 @@ aside {
 }
 
 #hamburger_icon {
+    z-index: 10;
     position: fixed;
     top: -100%;
     font-size: 2em;
@@ -253,22 +254,16 @@ aside {
         left: -100%;
     }
 
-    #myAside {
+    #toc_container {
         content: "&#8250;";
         left: -250px;
         max-width: inherit;
         width: 250px;
         transition: left 0.5s;
     }
-    #myAside.open {
+    #toc_container.open {
         content: "&#8249;";
         left: 0;
         transition: left 0.5s;
     }
-}
-
-#hamburger_icon img {
-    width: 10px;
-    height: auto;
-    aspect-ratio: 1;
 }
