@@ -204,6 +204,20 @@ button:disabled,
     width: 95%;
 }
 
+.sous_condition{
+    position: absolute;
+    font-size: 0.7em;
+    color: rgb(119, 107, 107);
+    bottom: 1;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.asterix{
+    font-size: 0.7em;
+}
+
+
 @media only screen and (max-width: 768px) {
     header {
         width: 100%;
@@ -432,7 +446,7 @@ textarea {
        Par défaut, les textarea ont une police monospace */
     font: 1em sans-serif;
     /* Pour que tous les champs texte aient la même dimension */
-    width: 300px;
+    width: 90%;
     box-sizing: border-box;
     /* Pour harmoniser le look & feel des bordures des champs texte */
     border: 1px solid #999;
