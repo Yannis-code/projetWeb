@@ -408,19 +408,12 @@ form {
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
     border-radius: 1em;
-<<<<<<< HEAD
+    border: solid 1px black;
+    background-color: rgba(240, 240, 240, 1)
 }
 
 form div {
     align-content: flex-start;
-=======
-    border: solid 1px black;
-    background-color: rgba(240, 240, 240, 1)
-  }
-  
-  form div {
-    align-content:flex-start;
->>>>>>> d0e61f7eb3547ee482def19c2e4ae4d3a13385b5
     margin-top: 1em;
     display: flex;
     flex-direction: column;
@@ -462,8 +455,4 @@ textarea {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 5%;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d0e61f7eb3547ee482def19c2e4ae4d3a13385b5
