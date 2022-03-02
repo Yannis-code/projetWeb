@@ -181,7 +181,7 @@ button:disabled,
 
 .p-content {
     text-align: justify;
-    font-size: 25px;
+    font-size: 1em;
 }
 
 .article-img_container {
@@ -403,14 +403,24 @@ form {
     display: flex;
     border: none;
     flex-direction: column;
-    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
     border-radius: 1em;
+<<<<<<< HEAD
 }
 
 form div {
     align-content: flex-start;
+=======
+    border: solid 1px black;
+    background-color: rgba(240, 240, 240, 1)
+  }
+  
+  form div {
+    align-content:flex-start;
+>>>>>>> d0e61f7eb3547ee482def19c2e4ae4d3a13385b5
     margin-top: 1em;
     display: flex;
     flex-direction: column;
@@ -452,4 +462,8 @@ textarea {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 5%;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d0e61f7eb3547ee482def19c2e4ae4d3a13385b5
