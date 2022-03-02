@@ -20,51 +20,24 @@
     border: 3px solid;
     border-radius: 15px;
     text-align: center;
-    color: darkgray;
-    padding-bottom: 10%;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
 
     border-color: rgba(225, 225, 225,0.8);
+    background-color: rgba(13,53,174,0.5);
+}
+
+.cadre_accueil p{
+    padding: 0 5px;
 }
 
 #cadre_accueil1{
     bottom: 10%;
-    background-color: rgba(0, 0, 139, .30);
-} 
+}
 
 
 #cadre_accueil2{
     top: 10%;
-    background-color: rgba(139, 0, 0, 0.30);
-}
-
-a.button{
-    position: sticky;
-    font-size: small;
-    text-align: center;
-    vertical-align: middle;
-    width: 60px;
-    height: 25px;
-    padding: 5px 10px;
-
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, .5);
-    border: 2px black solid;
-}
-
-a.button:hover{
-    background-color: rgba(0, 0, 0, .8);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-a.button:visited{
-    color: white;
-    text-decoration: none;
-}
-
-a.button:active{
-    background-color: rgba(0, 0, 0, 1);
 }
 
 
@@ -89,20 +62,21 @@ a.button:active{
 
     .cadre_accueil{
         width: 25%;
-        height: 25%;
     }
 
     #cadre_accueil1{
         right: 8%;
+        background: linear-gradient(115deg, rgba(255,255,255,0.5) 0%, rgba(13,53,174,0.5) 100%);
     } 
 
 
     #cadre_accueil2{
         left: 8%;
+        background: linear-gradient(335deg, rgba(255,255,255,0.5) 0%, rgba(13,53,174,0.5) 100%);
     }
 
     a.button{
-        bottom: 20%;
+        bottom: 5px;
     }
 }
 
@@ -136,14 +110,16 @@ a.button:active{
 
     #cadre_accueil1{
         left: 8%;
+        background: linear-gradient(225deg, rgba(255,255,255,0.5) 0%, rgba(13,53,174,0.5) 100%);
     } 
 
 
     #cadre_accueil2{
         right: 8%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, rgba(13,53,174,0.5) 100%);
     }
 
     a.button{
-        bottom: 5%;
+        bottom: 5px;
     }
 }

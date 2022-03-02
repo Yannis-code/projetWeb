@@ -38,7 +38,9 @@
 }
 
 .caroussel_button {
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    justify-content: center;
     border: none;
     border-radius: 5px;
     font-size: 2em;
@@ -49,8 +51,19 @@
     width: 30px;
 }
 
+.caroussel_button:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+}
+
+.caroussel_button:active {
+    background-color: #F7F7F7;
+    border-color: #000000;
+    transform: scale(.96);
+}
+
 .caroussel_button:hover {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .caroussel_button_prev {
@@ -64,8 +77,7 @@
 }
 
 .puce {
-    font-size: 3em;
-    margin-left: 25%;
+    font-size: 0.85em;
 }
 
 /* Redéfinition de certaines propriétés pour le Caroussel de la page2 */
