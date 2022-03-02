@@ -165,7 +165,7 @@ button:disabled,
 
 .p-content {
     text-align: justify;
-    font-size: 25px;
+    font-size: 1em;
 }
 
 .article-img_container {
@@ -380,11 +380,13 @@ form {
     /* Uniquement centrer le formulaire sur la page */
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
-    border: 1px solid #CCC;
     border-radius: 1em;
+    border: solid 1px black;
+    background-color: rgba(240, 240, 240, 1)
   }
   
   form div {
@@ -434,4 +436,3 @@ form {
     transform: translateX(-50%);
     margin-top: 5%;
 }
-
