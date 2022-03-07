@@ -504,28 +504,23 @@ function sortTable(type) {
         sortedDesc[1] = true;
         sortedDesc[0] = true;
     }
-    let table = document.getElementById("table-eSport_teams");
-
-    table.innerHTML = `
-        <tr>
-            <th onclick="sortTable('ID')">Logo d'équipe</th>
-            <th onclick="sortTable('NAME')">Nom d'équipe</th>
-            <th onclick="sortTable('ZONE')">Région</th>
-        </tr>`
-
+    let table = document.getElementById("table_body");
+    table.innerHTML = "";
+    document.getElementById("table-eSport_teams").scrollTo({ top: 0 });
     for (let i = 0; i < json.length; i++) {
         table.innerHTML += `
-            <tr class="${(i%2)?"impair":"pair"}">
-                <td><img src="${"./src/teamCSV/img/"+json[i].id+".png"}" /></th>
-                <td>${json[i].nom}</th>
-                <td>${json[i].zone}</th>
-            </tr>`
+        <tr class="${(i%2)?"impair":"pair"}">
+            <td><img src="${"./src/teamCSV/img/"+json[i].id+".png"}" /></th>
+            <td>${json[i].nom}</th>
+            <td>${json[i].zone}</th>
+        </tr>
+        `
     }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    let table = document.getElementById("table-eSport_teams");
+    let table = document.getElementById("table_body");
 
 
     for (let i = 0; i < json.length; i++) {

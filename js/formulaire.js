@@ -140,15 +140,20 @@ form.addEventListener("input", function(event) {
 form.addEventListener("submit", function(event) {
     // stop form submission
     event.preventDefault();
-
-    console.log(event.target)
-        // validate the form
-    let nameValid = hasValue(form.elements["name"], NAME_REQUIRED);
-    let firtsnameValid = hasValue(form.elements["prenom"], FIRSTNAME_REQUIRED);
-    let IdValid = hasValue(form.elements["user_id"], ID_REQUIRED);
-    let emailValid = validateEmail(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID);
+    var prenom = document.getElementById("prenom");
+    var name = document.getElementById("name");
+    var bday = document.getElementById("bday");
+    var email = document.getElementById("email");
+    var user_id = document.getElementById("user_id");
+    var mdp = document.getElementById("mdp");
+    var validPrenom = validateCompletion(prenom, emptyError["prenom"]);
+    var validName = validateCompletion(name, emptyError["name"]);
+    var validBday = validateDate(bday, emptyError["bday"], invalidError["bday"]);
+    var validUser_id = validateUsername(user_id, emptyError["user_id"], invalidError["user_id"]);
+    var validEmail = validateEmail(email, emptyError["email"], invalidError["email"]);
+    var validMdp = validatePassword(mdp, emptyError["mdp"], invalidError["mdp"]);
     // if valid, submit the form.
-    if (nameValid && firtsnameValid && emailValid && IdValid) {
+    if (validPrenom && validName && validBday && validUser_id && validEmail && validMdp) {
         alert("Demo only. No form was posted.");
     }
 });

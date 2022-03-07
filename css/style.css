@@ -6,14 +6,14 @@
     --btn-bg: 247, 244, 244;
     --txt-color: #222222;
     --txt-color-alt: 247, 244, 244;
-    --btn-active-bg: #F7F7F7;
+    --btn-active-bg: 247, 247, 247;
     --btn-disabled-borderAndColor: #DDDDDD;
     --tbl-even: 255, 255, 255;
     --tbl-even-hover: 245, 245, 245;
     --tbl-odd: 235, 235, 235;
     --tbl-odd-hover: 225, 225, 225;
-    --tbl-header: #000000;
-    --tbl-header-hover: #1d1d1d;
+    --tbl-header: 0, 0, 0;
+    --tbl-header-hover: 29, 29, 29;
 }
 
 html {
@@ -257,6 +257,11 @@ button:disabled,
     padding: 8px;
 }
 
+#table-eSport_teams th {
+    position: sticky;
+    top: 0;
+}
+
 .pair {
     background-color: rgb(var(--tbl-even));
 }
@@ -292,6 +297,7 @@ button:disabled,
      ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
+        background-color: rgb(30, 30, 30);
     }
      ::-webkit-scrollbar-track {
         background: rgb(30, 30, 30);

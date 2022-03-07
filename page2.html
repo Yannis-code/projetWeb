@@ -130,8 +130,7 @@
 
             <article class="article_linear">
                 <p class="p-content">
-                    Vous souhaitez vous aussi faire partie des meilleurs ? Nous avons la solution.
-                    Rendez vous en SSL, champion : <a href="formulaire.html">inscription</a>
+                    Vous souhaitez vous aussi faire partie des meilleurs ? Nous avons la solution. Rendez vous en SSL, champion : <a href="formulaire.html">inscription</a>
                 </p>
 
             </article>
@@ -140,11 +139,14 @@
             <h3>Equipes Rocket League actives notables</h3>
             <div id="container_table-teams">
                 <table id="table-eSport_teams">
-                    <tr>
-                        <th onclick="sortTable('ID')">Logo d'équipe</th>
-                        <th onclick="sortTable('NAME')">Nom d'équipe</th>
-                        <th onclick="sortTable('ZONE')">Région</th>
-                    </tr>
+                    <thead id="table_head">
+                        <tr>
+                            <th onclick="sortTable('ID')">Logo d'équipe</th>
+                            <th onclick="sortTable('NAME')">Nom d'équipe</th>
+                            <th onclick="sortTable('ZONE')">Région</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body"></tbody>
                 </table>
             </div>
         </article>
