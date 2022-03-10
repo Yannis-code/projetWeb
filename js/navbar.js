@@ -1,7 +1,7 @@
 /**
  * Fonction de l'affichage du "burger menu"
  */
-function showResponsiveMenu() {
+ function showResponsiveMenu() {
     var body = document.querySelector("body");
     var menu = document.getElementById("topnav_responsive_menu");
     var icon = document.getElementById("topnav_hamburger_icon");

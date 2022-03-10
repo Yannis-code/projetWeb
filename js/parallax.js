@@ -1,7 +1,7 @@
 /**
  * Lancement de la fonction de parallax dès que la page a fini de charger
  */
-document.addEventListener("DOMContentLoaded", function(event) {
+ document.addEventListener("DOMContentLoaded", function(event) {
     document.addEventListener("mousemove", parallax);
     const bg = document.querySelector("#bg");
 
