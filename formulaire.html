@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/formulaire.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
 
     <script src="js/navbar.js"></script>
 </head>
@@ -30,7 +31,7 @@
                 <input type="text" id="prenom" name="user_prenom" placeholder="Rémi" required>
             </div>
             <div>
-                <label for="name">Nom :</label>
+                <label class="required" for="name">Nom :</label>
                 <small class="output_error"></small>
                 <input type="text" id="name" name="user_name" placeholder="Depain" required>
             </div>
@@ -40,30 +41,35 @@
                 <input type="text" id="bday" name="bday" placeholder="jj/mm/aaaa">
             </div>
             <div>
-                <label for="email">E-mail :</label>
+                <label class="required" for="email">E-mail :</label>
                 <small class="output_error"></small>
                 <input type="text" id="email" name="user_mail" placeholder="exemple@mail.com" required>
             </div>
             <div>
-                <label for="user_id">Identifiant de compte :</label>
+                <label class="required" for="user_id">Identifiant de compte :</label>
                 <small class="output_error"></small>
                 <input type="text" id="user_id" name="user_id" value="" placeholder="Identifant" required>
             </div>
             <div>
-                <label for="mdp">Mot de passe :</label>
+                <label class="required" for="mdp">Mot de passe :</label>
                 <small class="output_error"></small>
                 <input type="password" id="mdp" name="user_mdp" value="" placeholder="" required>
             </div>
             <div id="btn_submit">
                 <button type="submit">Valider</button>
             </div>
+            <p class="sous_condition required">
+                Champs nécessaires
+            </p>
         </form>
         <output id="form_output" form="registration_form">
             
         </output>
-        <p class="sous_condition">
-            *Coaching sous reserve que vous ne soyer pas meilleur que nous
-        </p>
+        <article class="article_linear">
+            <p class="sous_condition">
+                *Coaching sous reserve que vous ne soyer pas meilleur que nous
+            </p>
+        </article>
     </main>
 
     <footer>
@@ -72,7 +78,7 @@
 
     <div id="root">
         <div id="topnav" class="topnav">
-            <a id="home_link" class="topnav_link" href="index.html">HOME</a>
+            <a id="home_link" class="topnav_link" href="index.html">Accueil</a>
 
             <!-- Menu Classic -->
             <nav id="topnav_menu">
@@ -80,6 +86,7 @@
                 <a class="topnav_link" href="page2.html">L' E-sport</a>
                 <a class="topnav_link" href="page3.html">Le Garage</a>
                 <a class="topnav_link" href="formulaire.html">Formulaire</a>
+                <a href="https://www.youtube.com/watch?v=ar5oob5elZs" class=video_cache>Caché</a>
             </nav>
 
             <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
@@ -92,10 +99,11 @@
             <!-- Responsive Menu -->
             <nav id="topnav_responsive_menu">
                 <ul>
-                    <li><a href="page1.html">Jeu</a></li>
-                    <li><a href="page2.html">L' E-sport</a></li>
-                    <li><a href="page3.html">Le Garage</a></li>
-                    <li><a href="formulaire.html">Formulaire</a></li>
+                    <li><a href="page1.html" class="topnav_responsive_menu_a">Jeu</a></li>
+                    <li><a href="page2.html" class="topnav_responsive_menu_a">L' E-sport</a></li>
+                    <li><a href="page3.html" class="topnav_responsive_menu_a">Le Garage</a></li>
+                    <li><a href="formulaire.html" class="topnav_responsive_menu_a">Formulaire</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="topnav_responsive_menu_a video_cache">Caché</a></li>
                 </ul>
             </nav>
         </div>

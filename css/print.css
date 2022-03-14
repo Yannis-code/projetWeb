@@ -1,0 +1,29 @@
+#root,
+#toc_container,
+header,
+#background-video,
+.caroussel_button {
+    display: none;
+}
+
+main {
+    max-width: 100%;
+    border: none;
+}
+
+.scrolling_caroussel {
+    z-index: 1;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+#carousel_fullpage {
+    display: flex;
+    flex-direction: column;
+}
+
+#container_table-teams {
+    height: auto;
+}

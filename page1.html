@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
 
     <script src="js/navbar.js"></script>
     <script src="js/page1.js"></script>
@@ -21,7 +22,7 @@
             <li><a href="#pdj" onclick="showAside(true)">Principe du jeu</a></li>
             <li><a href="#partie" onclick="showAside(true)">Partie</a>
                 <ul>
-                    <li><a href="#compet" onclick="showAside()">Compétitif</a></li>
+                    <li><a href="#compet" onclick="showAside(true)">Compétitif</a></li>
                     <li><a href="#occa" onclick="showAside(true)">Occasionnel</a></li>
                 </ul>
             </li>
@@ -83,7 +84,7 @@
 
             </p>
             <figure class="article-img_container">
-                <img src="src/img/page1/plateforme.jpg" id="plt" alt="pas trouvé">
+                <img src="src/img/page1/plateforme.jpg" id="plateform-img" alt="plateforme.jpg">
                 <figcaption>choix plateforme principale</figcaption>
             </figure>
         </article>
@@ -93,7 +94,7 @@
 
     <div id="root">
         <div id="topnav" class="topnav">
-            <a id="home_link" class="topnav_link" href="index.html">HOME</a>
+            <a id="home_link" class="topnav_link" href="index.html">Accueil</a>
 
             <!-- Menu Classic -->
             <nav id="topnav_menu">
@@ -114,11 +115,11 @@
             <!-- Responsive Menu -->
             <nav id="topnav_responsive_menu">
                 <ul>
-                    <li><a href="page1.html">Jeu</a></li>
-                    <li><a href="page2.html">L' E-sport</a></li>
-                    <li><a href="page3.html">Le Garage</a></li>
-                    <li><a href="formulaire.html">Formulaire</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="video_cache">Caché</a></li>
+                    <li><a href="page1.html" class="topnav_responsive_menu_a">Jeu</a></li>
+                    <li><a href="page2.html" class="topnav_responsive_menu_a">L' E-sport</a></li>
+                    <li><a href="page3.html" class="topnav_responsive_menu_a">Le Garage</a></li>
+                    <li><a href="formulaire.html" class="topnav_responsive_menu_a">Formulaire</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="topnav_responsive_menu_a video_cache">Caché</a></li>
                 </ul>
             </nav>
         </div>

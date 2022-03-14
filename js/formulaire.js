@@ -52,18 +52,18 @@ function validateDate(input, requiredMsg, invalidMsg) {
     if (!dateString.match(dateRegex)) {
         return showError(input, invalidMsg);
     }
-    const dt = dateString.split("/");
-    const date = new Date(dt[2], dt[1] - 1, dt[0]);
-    if (date.getFullYear() != parseInt(dt[2]) || date.getMonth() != parseInt(dt[1] - 1) || date.getDate() != parseInt(dt[0])) {
+    const inputDateArray = dateString.split("/");
+    const inputDate = new Date(Date.UTC(inputDateArray[2], inputDateArray[1] - 1, inputDateArray[0]));
+    if (inputDate.getFullYear() != parseInt(inputDateArray[2]) || inputDate.getMonth() != parseInt(inputDateArray[1] - 1) || inputDate.getDate() != parseInt(inputDateArray[0])) {
         return showError(input, invalidMsg);
     }
     // Gérer le cas où la date indiqué est après la date du jour
-    var d = new Date(Date.now())
-    console.log(Date.UTC(dt[2], dt[1] - 1, dt[0]))
-    console.log(d.getUTCDate())
-    console.log(date.getUTCDate())
-    if (!(date < Date.now())) {
-        return showError(input, invalidMsg);
+    const currentDate = new Date();
+    const currentDateNoTime = new Date(currentDate.toDateString());
+    const InputDateNoTime = new Date(inputDate.toDateString());
+
+    if ((currentDateNoTime.getTime() - InputDateNoTime.getTime()) / (24 * 60 * 60 * 1000) < 0) {
+        return showError(input, "La date renseignée doit être passée");
     }
     return showSuccess(input);
 }
