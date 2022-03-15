@@ -31,10 +31,12 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-image: url(../src/img/bg/fond_rl_site.webp);
+    background-image: url(../src/img/bg/forbiddenTemple.gif);
     background-attachment: fixed;
 }
 
+
+/*
 #background-video {
     width: 100vw;
     height: 100vh;
@@ -46,6 +48,7 @@ body {
     bottom: 0;
     z-index: -1;
 }
+*/
 
 header {
     display: block;
