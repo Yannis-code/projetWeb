@@ -154,14 +154,24 @@ form.addEventListener("submit", function(event) {
     var validuserpwd = validatePassword(userpwd, emptyError["userpwd"], invalidError["userpwd"]);
     // if valid, submit the form.
     if (validfirstname && validlastname && validbirthdate && validusername && validuseremail && validuserpwd) {
-        var request = new XMLHttpRequest();
-
-        request.open("POST", "htbin/register.py");
-        request.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                document.getElementById("form_output").innerHTML = this.responseText;
-            }
-        };
-        request.send();
+        sendForm();
     }
 });
+
+var sendForm = () => {
+    try {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP"); // Essayer IE 
+    } catch (e) // Echec, utiliser l'objet standard 
+    {
+        xhr = new XMLHttpRequest();
+    }
+    var formData = new FormData(form);
+
+    xhr.open("POST", "htbin/register.py");
+    xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("form_output").innerHTML = "Insciption réussie";
+        }
+    };
+    xhr.send(formData);
+}
