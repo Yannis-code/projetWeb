@@ -1,4 +1,23 @@
-// show a message with a type of the input
+const registerForm = document.getElementById("registration_form");
+const loginForm = document.getElementById("LoginForm");
+
+const EMAIL_INVALID = "Veuillez entrer un email valide (exemple@gmail.com)";
+const emptyError = {
+    "lastname": "Veuillez entrer un nom",
+    "firstname": "Veuillez entrer un prénom",
+    "birthdate": "Veuillez entrer une date de naissance",
+    "username": "Veuillez entrer un identifiant de compte",
+    "useremail": "Veuillez entrer un email",
+    "userpwd": "Veuillez entrer un mot de passe",
+}
+
+const invalidError = {
+    "birthdate": "Veuillez entrer une date de naissance valide (jj/mm/aaaa)",
+    "username": "Veuillez entrer un identifiant de compte valide (minimum 6 caractères)",
+    "useremail": "Veuillez entrer un email valide (ex: exemple@gmail.com)",
+    "userpwd": "Veuillez entrer un mot de passe valide",
+}
+
 function showMessage(input, message, type) {
     // get the small element and set the message
     const msg = input.parentNode.querySelector("small");
@@ -93,26 +112,7 @@ function validatePassword(input, requiredMsg, invalidMsg) {
     return showSuccess(input);
 }
 
-const form = document.querySelector("#registration_form");
-
-const EMAIL_INVALID = "Veuillez entrer un email valide (exemple@gmail.com)";
-const emptyError = {
-    "lastname": "Veuillez entrer un nom",
-    "firstname": "Veuillez entrer un prénom",
-    "birthdate": "Veuillez entrer une date de naissance",
-    "username": "Veuillez entrer un identifiant de compte",
-    "useremail": "Veuillez entrer un email",
-    "userpwd": "Veuillez entrer un mot de passe",
-}
-
-const invalidError = {
-    "birthdate": "Veuillez entrer une date de naissance valide (jj/mm/aaaa)",
-    "username": "Veuillez entrer un identifiant de compte valide (minimum 6 caractères)",
-    "useremail": "Veuillez entrer un email valide (ex: exemple@gmail.com)",
-    "userpwd": "Veuillez entrer un mot de passe valide",
-}
-
-form.addEventListener("input", function (event) {
+registerForm.addEventListener("input", function(event) {
     event.preventDefault();
     var target = event.target.id;
     if (target === "lastname" || target === "firstname") {
@@ -137,7 +137,7 @@ form.addEventListener("input", function (event) {
     }
 });
 
-form.addEventListener("submit", function (event) {
+registerForm.addEventListener("submit", function(event) {
     // stop form submission
     event.preventDefault();
     var firstname = document.getElementById("firstname");
@@ -154,63 +154,48 @@ form.addEventListener("submit", function (event) {
     var validuserpwd = validatePassword(userpwd, emptyError["userpwd"], invalidError["userpwd"]);
     // if valid, submit the form.
     if (validfirstname && validlastname && validbirthdate && validusername && validuseremail && validuserpwd) {
-        sendForm();
+        event.preventDefault();
+        register();
     }
 });
 
-var sendForm = () => {
+const register = () => {
     try {
         xhr = new ActiveXObject("Microsoft.XMLHTTP"); // Essayer IE 
     } catch (e) // Echec, utiliser l'objet standard 
     {
         xhr = new XMLHttpRequest();
     }
-    var formData = new FormData(form);
+    var formData = new FormData(registerForm);
 
     xhr.open("POST", "htbin/register.py");
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("form_output").innerHTML = "Insciption réussie";
+            document.getElementById("form_output").innerHTML = "Inscription Réussie";
         }
     };
     xhr.send(formData);
 }
 
-function login(loginForm) {
-    var un = loginForm.Username.value;
-    var pw = loginForm.Password.value;
-    var xmlhttp = new XMLHttpRequest();
-    var formData = new FormData(loginForm);
-    xmlhttp.open("post", "htbin/login.py");
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            loginResults();
-        }
-    }
-    xmlhttp.send(formData);
-}
-
-
-window.addEventListener(window, "load", function () {
-    var loginForm = document.getElementById("LoginForm");
-    loginForm.addEventListener("submit", function () {
-        login(loginForm);
-    });
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    login();
 });
 
-function loginResults() {
-    var loggedIn = document.getElementById("LoggedIn");
-    var badLogin = document.getElementById("BadLogin");
-    if (xmlhttp.responseText.indexOf("failed") == -1) {
-        loggedIn.innerHTML = "Logged in as " + xmlhttp.responseText;
-        loggedIn.style.display = "block";
-        form.style.display = "none";
-    } else {
-        badLogin.style.display = "block";
-        form.Username.select();
-        form.Username.className = "Highlighted";
-        setTimeout(function () {
-            badLogin.style.display = 'none';
-        }, 3000);
+const login = () => {
+    try {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP"); // Essayer IE 
+    } catch (e) // Echec, utiliser l'objet standard 
+    {
+        xhr = new XMLHttpRequest();
     }
+    var formData = new FormData(loginForm);
+
+    xhr.open("POST", "htbin/login.py");
+    xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("BadLogin").innerHTML = this.responseText;
+        }
+    };
+    xhr.send(formData);
 }
