@@ -112,7 +112,7 @@ const invalidError = {
     "userpwd": "Veuillez entrer un mot de passe valide",
 }
 
-form.addEventListener("input", function(event) {
+form.addEventListener("input", function (event) {
     event.preventDefault();
     var target = event.target.id;
     if (target === "lastname" || target === "firstname") {
@@ -137,7 +137,7 @@ form.addEventListener("input", function(event) {
     }
 });
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
     // stop form submission
     event.preventDefault();
     var firstname = document.getElementById("firstname");
@@ -168,10 +168,49 @@ var sendForm = () => {
     var formData = new FormData(form);
 
     xhr.open("POST", "htbin/register.py");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             document.getElementById("form_output").innerHTML = "Insciption réussie";
         }
     };
     xhr.send(formData);
+}
+
+function login(loginForm) {
+    var un = loginForm.Username.value;
+    var pw = loginForm.Password.value;
+    var xmlhttp = new XMLHttpRequest();
+    var formData = new FormData(loginForm);
+    xmlhttp.open("post", "htbin/login.py");
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            loginResults();
+        }
+    }
+    xmlhttp.send(formData);
+}
+
+
+window.addEventListener(window, "load", function () {
+    var loginForm = document.getElementById("LoginForm");
+    loginForm.addEventListener("submit", function () {
+        login(loginForm);
+    });
+});
+
+function loginResults() {
+    var loggedIn = document.getElementById("LoggedIn");
+    var badLogin = document.getElementById("BadLogin");
+    if (xmlhttp.responseText.indexOf("failed") == -1) {
+        loggedIn.innerHTML = "Logged in as " + xmlhttp.responseText;
+        loggedIn.style.display = "block";
+        form.style.display = "none";
+    } else {
+        badLogin.style.display = "block";
+        form.Username.select();
+        form.Username.className = "Highlighted";
+        setTimeout(function () {
+            badLogin.style.display = 'none';
+        }, 3000);
+    }
 }
