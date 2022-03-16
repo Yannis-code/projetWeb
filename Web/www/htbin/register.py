@@ -25,6 +25,7 @@ data['lastname'] = 'Facultatif'
 data['birthdate'] = 'Facultatif'
 
 form = cgi.FieldStorage()
+print(form.keys())
 for name in list(form.keys()):
 	if name.lower() == 'userpwd':
 		data[name] = hashlib.sha512(form.getfirst(name).encode('utf-8')).hexdigest()

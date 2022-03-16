@@ -29,15 +29,15 @@ function validateCompletion(input, message) {
     return showSuccess(input);
 }
 
-function validateEmail(input, requiredMsg, invalidMsg) {
-    const email = input.value.trim();
-    const emailRegex =
+function validateuseremail(input, requiredMsg, invalidMsg) {
+    const useremail = input.value.trim();
+    const useremailRegex =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (email === "") {
+    if (useremail === "") {
         return showError(input, requiredMsg);
     }
-    if (!email.match(emailRegex)) {
+    if (!useremail.match(useremailRegex)) {
         return showError(input, invalidMsg);
     }
     return showSuccess(input);
@@ -97,39 +97,39 @@ const form = document.querySelector("#registration_form");
 
 const EMAIL_INVALID = "Veuillez entrer un email valide (exemple@gmail.com)";
 const emptyError = {
-    "name": "Veuillez entrer un nom",
-    "prenom": "Veuillez entrer un prénom",
-    "bday": "Veuillez entrer une date de naissance",
-    "user_id": "Veuillez entrer un identifiant de compte",
-    "email": "Veuillez entrer un email",
-    "mdp": "Veuillez entrer un mot de passe",
+    "lastname": "Veuillez entrer un nom",
+    "firstname": "Veuillez entrer un prénom",
+    "birthdate": "Veuillez entrer une date de naissance",
+    "username": "Veuillez entrer un identifiant de compte",
+    "useremail": "Veuillez entrer un email",
+    "userpwd": "Veuillez entrer un mot de passe",
 }
 
 const invalidError = {
-    "bday": "Veuillez entrer une date de naissance valide (jj/mm/aaaa)",
-    "user_id": "Veuillez entrer un identifiant de compte valide (minimum 6 caractères)",
-    "email": "Veuillez entrer un email valide (ex: exemple@gmail.com)",
-    "mdp": "Veuillez entrer un mot de passe valide",
+    "birthdate": "Veuillez entrer une date de naissance valide (jj/mm/aaaa)",
+    "username": "Veuillez entrer un identifiant de compte valide (minimum 6 caractères)",
+    "useremail": "Veuillez entrer un email valide (ex: exemple@gmail.com)",
+    "userpwd": "Veuillez entrer un mot de passe valide",
 }
 
 form.addEventListener("input", function(event) {
     event.preventDefault();
     var target = event.target.id;
-    if (target === "name" || target === "prenom") {
+    if (target === "lastname" || target === "firstname") {
         validateCompletion(event.target, emptyError[target]);
     } else {
         switch (target) {
-            case "bday":
-                validateDate(event.target, emptyError["bday"], invalidError["bday"]);
+            case "birthdate":
+                validateDate(event.target, emptyError["birthdate"], invalidError["birthdate"]);
                 break;
-            case "user_id":
-                validateUsername(event.target, emptyError["user_id"], invalidError["user_id"]);
+            case "username":
+                validateUsername(event.target, emptyError["username"], invalidError["username"]);
                 break;
-            case "email":
-                validateEmail(event.target, emptyError["email"], invalidError["email"]);
+            case "useremail":
+                validateuseremail(event.target, emptyError["useremail"], invalidError["useremail"]);
                 break;
-            case "mdp":
-                validatePassword(event.target, emptyError["mdp"], invalidError["mdp"]);
+            case "userpwd":
+                validatePassword(event.target, emptyError["userpwd"], invalidError["userpwd"]);
                 break;
             default:
                 break;
@@ -140,20 +140,28 @@ form.addEventListener("input", function(event) {
 form.addEventListener("submit", function(event) {
     // stop form submission
     event.preventDefault();
-    var prenom = document.getElementById("prenom");
-    var name = document.getElementById("name");
-    var bday = document.getElementById("bday");
-    var email = document.getElementById("email");
-    var user_id = document.getElementById("user_id");
-    var mdp = document.getElementById("mdp");
-    var validPrenom = validateCompletion(prenom, emptyError["prenom"]);
-    var validName = validateCompletion(name, emptyError["name"]);
-    var validBday = validateDate(bday, emptyError["bday"], invalidError["bday"]);
-    var validUser_id = validateUsername(user_id, emptyError["user_id"], invalidError["user_id"]);
-    var validEmail = validateEmail(email, emptyError["email"], invalidError["email"]);
-    var validMdp = validatePassword(mdp, emptyError["mdp"], invalidError["mdp"]);
+    var firstname = document.getElementById("firstname");
+    var lastname = document.getElementById("lastname");
+    var birthdate = document.getElementById("birthdate");
+    var useremail = document.getElementById("useremail");
+    var username = document.getElementById("username");
+    var userpwd = document.getElementById("userpwd");
+    var validfirstname = validateCompletion(firstname, emptyError["firstname"]);
+    var validlastname = validateCompletion(lastname, emptyError["lastname"]);
+    var validbirthdate = validateDate(birthdate, emptyError["birthdate"], invalidError["birthdate"]);
+    var validusername = validateUsername(username, emptyError["username"], invalidError["username"]);
+    var validuseremail = validateuseremail(useremail, emptyError["useremail"], invalidError["useremail"]);
+    var validuserpwd = validatePassword(userpwd, emptyError["userpwd"], invalidError["userpwd"]);
     // if valid, submit the form.
-    if (validPrenom && validName && validBday && validUser_id && validEmail && validMdp) {
-        alert("Demo only. No form was posted.");
+    if (validfirstname && validlastname && validbirthdate && validusername && validuseremail && validuserpwd) {
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "htbin/register.py");
+        request.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                document.getElementById("form_output").innerHTML = this.responseText;
+            }
+        };
+        request.send();
     }
 });
