@@ -112,7 +112,7 @@ function validatePassword(input, requiredMsg, invalidMsg) {
     return showSuccess(input);
 }
 
-registerForm.addEventListener("input", function(event) {
+registerForm.addEventListener("input", function (event) {
     event.preventDefault();
     var target = event.target.id;
     if (target === "lastname" || target === "firstname") {
@@ -137,7 +137,7 @@ registerForm.addEventListener("input", function(event) {
     }
 });
 
-registerForm.addEventListener("submit", function(event) {
+registerForm.addEventListener("submit", function (event) {
     // stop form submission
     event.preventDefault();
     var firstname = document.getElementById("firstname");
@@ -169,7 +169,7 @@ const register = () => {
     var formData = new FormData(registerForm);
 
     xhr.open("POST", "htbin/register.py");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             document.getElementById("form_output").innerHTML = "Inscription Réussie";
         }
@@ -177,7 +177,7 @@ const register = () => {
     xhr.send(formData);
 }
 
-loginForm.addEventListener("submit", function(event) {
+loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
     login();
 });
@@ -192,10 +192,31 @@ const login = () => {
     var formData = new FormData(loginForm);
 
     xhr.open("POST", "htbin/login.py");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             document.getElementById("BadLogin").innerHTML = this.responseText;
         }
     };
     xhr.send(formData);
+}
+
+function showLogin(hide = false) {
+    var logform = document.getElementById("LoginForm");
+    if (logform.className === "" && !hide) {
+        for (let index = 0; index < body.children.length; index++) {
+            const el = body.children[index];
+            if (el != btn && el != aside) {
+                el.style.filter = "blur(2px)";
+            }
+        }
+        aside.className = "appear";
+    } else {
+        for (let index = 0; index < body.children.length; index++) {
+            const el = body.children[index];
+            if (el != btn && el != aside) {
+                el.style.filter = "none";
+            }
+        }
+        logform.className = "";
+    }
 }

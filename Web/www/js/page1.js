@@ -2,7 +2,6 @@ function showAside(hide = false) {
     var body = document.querySelector("body");
     var aside = document.getElementById("toc_container");
     var btn = document.getElementById("show_aside_button");
-    var blur = document.getElementById("blur");
     if (aside.className === "" && !hide) {
         for (let index = 0; index < body.children.length; index++) {
             const el = body.children[index];
@@ -26,7 +25,7 @@ function showAside(hide = false) {
     }
 }
 
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function (event) {
     if (window.innerWidth > 768 && document.getElementById("toc_container").className != "") {
         showAside();
     }

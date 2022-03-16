@@ -85,3 +85,18 @@ textarea {
     content: "*";
     color: rgb(184, 16, 16);
 }
+
+#LoginForm{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%) ;
+    transform: translateY(-100%);
+}
+
+.appear{
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) ;
+    transform: translateY(50%);
+}
