@@ -31,6 +31,7 @@ for name in list(form.keys()):
     else:
         form_data[name] = form.getfirst(name)
 
+
 if not 'username' in form_data:
     print('Le nom d\'utilisateur ne doit pas être vide.')
 elif not 'userpwd' in form_data:

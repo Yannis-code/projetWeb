@@ -11,10 +11,6 @@
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/caroussel.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-
-    <script src="js/navbar.js"></script>
-    <script src="js/caroussel.js"></script>
-    <script src="js/page2.js"></script>
 </head>
 
 <body>
@@ -131,8 +127,7 @@
             </div>
 
             <p class="p-content">
-                Vous souhaitez vous aussi faire partie des meilleurs ? Nous avons la solution. Rendez vous en SSL,
-                champion : <a href="formulaire.html">inscription</a>
+                Vous souhaitez vous aussi faire partie des meilleurs ? Nous avons la solution. Rendez vous en SSL, champion : <a href="formulaire.html">inscription</a>
             </p>
 
             <h2>Equipes Rocket League actives notables</h2>
@@ -165,10 +160,11 @@
                 <a class="topnav_link" href="page2.html">L' E-sport</a>
                 <a class="topnav_link" href="page3.html">Le Garage</a>
                 <a class="topnav_link" href="formulaire.html">Formulaire</a>
+                <span class="topnav_link connection">Connection</span>
                 <a href="https://www.youtube.com/watch?v=ar5oob5elZs" class=video_cache>Caché</a>
             </nav>
 
-            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <a id="topnav_hamburger_icon" href="javascript:void(0);">
                 <!-- Burger Menu -->
                 <span></span>
                 <span></span>
@@ -182,29 +178,32 @@
                     <li><a href="page2.html" class="topnav_responsive_menu_a">L' E-sport</a></li>
                     <li><a href="page3.html" class="topnav_responsive_menu_a">Le Garage</a></li>
                     <li><a href="formulaire.html" class="topnav_responsive_menu_a">Formulaire</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs"
-                            class="topnav_responsive_menu_a video_cache">Caché</a></li>
+                    <li class="topnav_responsive_menu_a connection">Connection</li>
+                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="topnav_responsive_menu_a video_cache">Caché</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
 
-    <form id="LoginForm">
+    <form class="LoginForm_popup" id="LoginForm">
         <h1>Login Form</h1>
         <div>
             <label for="username">Identifiant de compte :</label>
             <small class="output_error"></small>
-            <input type="text" id="username" name="username" value="" placeholder="Identifant">
+            <input type="text" name="username" value="" placeholder="Identifant">
         </div>
         <div>
             <label for="userpwd">Mot de passe :</label>
             <small class="output_error"></small>
-            <input type="password" id="userpwd" name="userpwd" value="" placeholder="">
+            <input type="password" name="userpwd" value="" placeholder="">
         </div>
         <div id="btn_submit">
             <button type="submit">Valider</button>
         </div>
+        <output id="login_output" form="LoginForm">
+
+        </output>
         <div>
             <p>Pas déjà inscrit? <a href="formulaire.html">inscription</a></p>
         </div>
@@ -213,6 +212,13 @@
     <header>
         <img src="src/img/page1/logo_rl.png" alt="rocket logo">
     </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/caroussel.js"></script>
+    <script src="js/page2.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

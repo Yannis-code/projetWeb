@@ -1,6 +1,7 @@
 /* ******************** GENERAL ******************** */
 
 @import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
+@import url('formulaire.css');
 @import url('fonts.css');
 :root {
     --theme-color-1: 255, 255, 255;
@@ -396,6 +397,25 @@ button:disabled,
     background-color: rgba(var(--theme-color-1), 1.0);
 }
 
+.LoginForm_popup {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 30rem;
+    min-width: 25rem;
+    transform: translate(-50%, -50%);
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.LoginForm_popup.appear {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+}
+
 @media only screen and (max-width: 768px) {
     #show_aside_button {
         top: 50%;
@@ -423,19 +443,24 @@ button:disabled,
         left: -5px;
         transition: left 0.5s;
     }
+    .LoginForm_popup {
+        max-width: 20rem;
+        min-width: 10rem;
+    }
 }
 
-#LoginForm{
-    position: absolute;
+.overlay {
+    position: fixed;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.19);
+    z-index: 50;
+    left: 0;
     top: 0;
-    right: 50%;
-    transform: translateX(50%) ;
-    transform: translateY(-100%);
+    width: 100%;
+    height: 100%;
 }
 
-.appear{
-    right: 50%;
-    top: 50%;
-    transform: translateX(50%) ;
-    transform: translateY(50%);
+.overlay_visible {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, .5);
 }

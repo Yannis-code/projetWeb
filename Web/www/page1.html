@@ -9,25 +9,23 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/formulaire.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-
-    <script src="js/navbar.js"></script>
-    <script src="js/page1.js"></script>
 </head>
 
 <body>
     <aside id="toc_container">
         <h1 id="toc_title">Sommaire</h1>
         <ul id="toc_list">
-            <li><a href="#pdj" onclick="showAside(true)">Principe du jeu</a></li>
-            <li><a href="#partie" onclick="showAside(true)">Partie</a>
+            <li><a href="#pdj">Principe du jeu</a></li>
+            <li><a href="#partie">Partie</a>
                 <ul>
-                    <li><a href="#compet" onclick="showAside(true)">Compétitif</a></li>
-                    <li><a href="#occa" onclick="showAside(true)">Occasionnel</a></li>
+                    <li><a href="#compet">Compétitif</a></li>
+                    <li><a href="#occa">Occasionnel</a></li>
                 </ul>
             </li>
-            <li><a href="#train" onclick="showAside(true)">Entrainement</a></li>
-            <li><a href="#pltfm" onclick="showAside(true)">Plateforme</a></li>
+            <li><a href="#train">Entrainement</a></li>
+            <li><a href="#pltfm">Plateforme</a></li>
         </ul>
     </aside>
 
@@ -35,85 +33,54 @@
         <article class="article_linear">
             <h1 id="pdj">Principe du jeu</h1>
             <p class="p-content">
-                Rocket League est un mélange de jeu de voiture et de jeu de football. Par équipe ou en solo, le joueur
-                contrôle un véhicule et peut alors frapper dans un ballon, avec pour objectif de marquer dans le but
-                adverse. Le joueur peut utiliser une jauge de boost
-                limitée à 100 pour accélérer et/ou se maintenir dans les airs, sauter pour réceptionner une balle et
-                initier un envol pour atteindre des balles en l'air, s'incliner en l'air. Il peut aussi faire des dashs
-                (une brusque accélération s'effectuant
-                en appuyant rapidement deux fois sur le bouton de saut tout en appuyant dans une direction) sur les
-                côtés et vers l'avant pour gagner de la vitesse ou se repositionner. Pour recharger sa jauge de boost,
-                le joueur récupère des capsules
+                Rocket League est un mélange de jeu de voiture et de jeu de football. Par équipe ou en solo, le joueur contrôle un véhicule et peut alors frapper dans un ballon, avec pour objectif de marquer dans le but adverse. Le joueur peut utiliser une jauge de boost
+                limitée à 100 pour accélérer et/ou se maintenir dans les airs, sauter pour réceptionner une balle et initier un envol pour atteindre des balles en l'air, s'incliner en l'air. Il peut aussi faire des dashs (une brusque accélération s'effectuant
+                en appuyant rapidement deux fois sur le bouton de saut tout en appuyant dans une direction) sur les côtés et vers l'avant pour gagner de la vitesse ou se repositionner. Pour recharger sa jauge de boost, le joueur récupère des capsules
                 (situées aux abords du terrain) ou sur des palettes éparpillées sur le terrain.
             </p>
-            <figure class="article-img_container">
+            <!-- <figure class="article-img_container">
                 <iframe src="https://www.youtube.com/embed/SgSX3gOrj60" title="YouTube video player" frameborder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
                 <figcaption>Vidéo de présentation du jeu</figcaption>
-            </figure>
+            </figure> -->
             <p class="p-content">
-                Le joueur peut personnaliser son véhicule avec divers objets classés en dix types (<a
-                    href="page3.html">châssis</a>, stickers, peintures, roues, turbos, accessoires, antennes, explosions
-                de but, traînées et bruits de moteur). Les objets
-                n'influent pas sur les caractéristiques des véhicules, hormis au niveau esthétique et les châssis qui
-                possèdent chacun une différente hitbox et rayon de braquage4. Le joueur collecte des objets en fin de
-                partie, classés selon leur rareté
-                (courant, peu courant, rare, très rare, importé, exotique, marché noir, premium et limité) et s'ils sont
-                peints ou certifiés. La plupart de ces catégories ne s'obtiennent que durant les parties en ligne ou
-                dans les caisses (Système remplacé
+                Le joueur peut personnaliser son véhicule avec divers objets classés en dix types (<a href="page3.html">châssis</a>, stickers, peintures, roues, turbos, accessoires, antennes, explosions de but, traînées et bruits de moteur). Les objets
+                n'influent pas sur les caractéristiques des véhicules, hormis au niveau esthétique et les châssis qui possèdent chacun une différente hitbox et rayon de braquage4. Le joueur collecte des objets en fin de partie, classés selon leur rareté
+                (courant, peu courant, rare, très rare, importé, exotique, marché noir, premium et limité) et s'ils sont peints ou certifiés. La plupart de ces catégories ne s'obtiennent que durant les parties en ligne ou dans les caisses (Système remplacé
                 par les "plans" depuis 4 décembre 2019).
             </p>
             <h1 id="partie">Partie</h1>
             <p class="p-content">
-                Une partie classique se déroule en 5 minutes et s'arrete dès que le ballon touche le sol une fois le
-                timer écoulé. À chaque but, le score est mis à jour et un nouvel engagement se lance. Alors un joueur de
-                chaque équipe cherche à arriver le plus rapidementsur
-                la balle mise au centre. Si au bout des 5 minutes, il y a égalité alors une prolongation se lance via un
-                engagement. La première équipe à marquer gagne le match. Enfin, après le match, les voitures des
-                gagnants sont exposées controlées
-                par ces derniers comme célébrations. Mais pour tous les modes de jeu classique, il existe deux types de
-                jeu :
+                Une partie classique se déroule en 5 minutes et s'arrete dès que le ballon touche le sol une fois le timer écoulé. À chaque but, le score est mis à jour et un nouvel engagement se lance. Alors un joueur de chaque équipe cherche à arriver le plus rapidementsur
+                la balle mise au centre. Si au bout des 5 minutes, il y a égalité alors une prolongation se lance via un engagement. La première équipe à marquer gagne le match. Enfin, après le match, les voitures des gagnants sont exposées controlées
+                par ces derniers comme célébrations. Mais pour tous les modes de jeu classique, il existe deux types de jeu :
             </p>
             <h2 id="compet">Compétitif</h2>
             <p class="p-content">
-                Le mode compétitif vise à classer les joueurs les uns par rapport aux autres. À chaque partie gagnée, on
-                monte dans le classement général, et inversement on descent à chaque défaite. Le classement consiste en
-                un nombre de point associé aux joueurs. puis
-                on les regroupe dans des fourchettes de points. Les plus haut classés pouvant esperer jouer au niveau <a
-                    href="page2.html">professionnel</a>. Les rangs de Rocket League sont sensiblement les mêmes que ceux
-                des autres jeux
+                Le mode compétitif vise à classer les joueurs les uns par rapport aux autres. À chaque partie gagnée, on monte dans le classement général, et inversement on descent à chaque défaite. Le classement consiste en un nombre de point associé aux joueurs. puis
+                on les regroupe dans des fourchettes de points. Les plus haut classés pouvant esperer jouer au niveau <a href="page2.html">professionnel</a>. Les rangs de Rocket League sont sensiblement les mêmes que ceux des autres jeux
                 :
-            <figure class="article-img_container">
-                <img src="src/img/page1/ranks.jpg" alt="pas trouvé">
-                <figcaption>Liste des grades Rocket League</figcaption>
-            </figure>
+                <figure class="article-img_container">
+                    <img src="src/img/page1/ranks.jpg" alt="pas trouvé">
+                    <figcaption>Liste des grades Rocket League</figcaption>
+                </figure>
             </p>
             <h2 id="occa">Occasionnel</h2>
             <p class="p-content">
-                Le mode occasionnel n'a rien de différent du mode comptétitif sur le plan de jeu mais exclus toute sorte
-                de classement visible. classement visible car il y a quand même un classement caché pour éviter que les
-                parties soient totalement deséquilibrées à
-                cause d'une trop grande différence de niveau. Aussi, il est possible de quitter les parties sans
-                sanction, vous serez alors remplacé par un ordinateur.
+                Le mode occasionnel n'a rien de différent du mode comptétitif sur le plan de jeu mais exclus toute sorte de classement visible. classement visible car il y a quand même un classement caché pour éviter que les parties soient totalement deséquilibrées à
+                cause d'une trop grande différence de niveau. Aussi, il est possible de quitter les parties sans sanction, vous serez alors remplacé par un ordinateur.
             </p>
             <h1 id="train">Entrainement</h1>
             <p class="p-content">
-                Rocket League possède un système d'entrainement intégré assez avancé. Tout d'abord, on peut aller en jeu
-                libre pour jouer librement avec la balle sans limite de temps et de boost. À côté de ça, le jeu propose
-                aussi des packs d'entrainements faits par
-                les joueurs pour s'entrainer plus spécifiquement. Enfin, il existe aussi le Steam Workshsop qui propose
-                des cartes plus avancé hors du stade habituel.
+                Rocket League possède un système d'entrainement intégré assez avancé. Tout d'abord, on peut aller en jeu libre pour jouer librement avec la balle sans limite de temps et de boost. À côté de ça, le jeu propose aussi des packs d'entrainements faits par
+                les joueurs pour s'entrainer plus spécifiquement. Enfin, il existe aussi le Steam Workshsop qui propose des cartes plus avancé hors du stade habituel.
             </p>
             <h1 id="pltfm">Plateforme</h1>
             <p class="p-content">
-                Initialement, Rocket League est un jeu qui était disponible uniquement sur windows et ps4 en 2015. Par
-                la suite, le jeu est sorti en 2016 sur xbox one, linux et mac. Pour finir, en 2017, le jeu est devenu
-                disponible sur switch. Avec ce grand nombre de
-                plateforme disponible, psyonix a mis en place sur le site officiel un choix à faire pour la plateforme
-                principale concernant un compte. Car avec un compte rocket league il est possible de jouer sur plusieurs
-                plateformes.
+                Initialement, Rocket League est un jeu qui était disponible uniquement sur windows et ps4 en 2015. Par la suite, le jeu est sorti en 2016 sur xbox one, linux et mac. Pour finir, en 2017, le jeu est devenu disponible sur switch. Avec ce grand nombre de
+                plateforme disponible, psyonix a mis en place sur le site officiel un choix à faire pour la plateforme principale concernant un compte. Car avec un compte rocket league il est possible de jouer sur plusieurs plateformes.
 
             </p>
             <figure class="article-img_container">
@@ -135,10 +102,11 @@
                 <a class="topnav_link" href="page2.html">L' E-sport</a>
                 <a class="topnav_link" href="page3.html">Le Garage</a>
                 <a class="topnav_link" href="formulaire.html">Formulaire</a>
+                <span class="topnav_link connection">Connection</span>
                 <a href="https://www.youtube.com/watch?v=ar5oob5elZs" class=video_cache>Caché</a>
             </nav>
 
-            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <a id="topnav_hamburger_icon" href="javascript:void(0);">
                 <!-- Burger Menu -->
                 <span></span>
                 <span></span>
@@ -152,8 +120,8 @@
                     <li><a href="page2.html" class="topnav_responsive_menu_a">L' E-sport</a></li>
                     <li><a href="page3.html" class="topnav_responsive_menu_a">Le Garage</a></li>
                     <li><a href="formulaire.html" class="topnav_responsive_menu_a">Formulaire</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs"
-                            class="topnav_responsive_menu_a video_cache">Caché</a></li>
+                    <li class="topnav_responsive_menu_a connection">Connection</li>
+                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="topnav_responsive_menu_a video_cache">Caché</a></li>
                 </ul>
             </nav>
         </div>
@@ -163,21 +131,24 @@
         <p>P. BOUTERIGE, Y. ROCHE - 2022</p>
     </footer>
 
-    <form id="LoginForm">
+    <form class="LoginForm_popup" id="LoginForm">
         <h1>Login Form</h1>
         <div>
             <label for="username">Identifiant de compte :</label>
             <small class="output_error"></small>
-            <input type="text" id="username" name="username" value="" placeholder="Identifant">
+            <input type="text" name="username" value="" placeholder="Identifant">
         </div>
         <div>
             <label for="userpwd">Mot de passe :</label>
             <small class="output_error"></small>
-            <input type="password" id="userpwd" name="userpwd" value="" placeholder="">
+            <input type="password" name="userpwd" value="" placeholder="">
         </div>
         <div id="btn_submit">
             <button type="submit">Valider</button>
         </div>
+        <output id="login_output" form="LoginForm">
+
+        </output>
         <div>
             <p>Pas déjà inscrit? <a href="formulaire.html">inscription</a></p>
         </div>
@@ -187,14 +158,13 @@
         <img src="src/img/page1/logo_rl.png" alt="rocket logo">
     </header>
 
-    <button id="show_aside_button" onclick="showAside()">&#8250;</button>
+    <button id="show_aside_button">&#8250;</button>
 
-    <!--
-    <video id="background-video" autoplay loop muted poster="./src/video/preview.png">
-        <source src="./src/video/forbiddenTemple.mp4" type="video/mp4">
-    </video>
-    -->
+    <div class="overlay" id="overlay"></div>
 
+    <script src="js/navbar.js"></script>
+    <script src="js/page1.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

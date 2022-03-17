@@ -54,7 +54,7 @@ textarea {
     height: 5em;
 }
 
-#btn_submit {
+.btn_submit {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 5%;
@@ -84,4 +84,19 @@ textarea {
 .required::before {
     content: "*";
     color: rgb(184, 16, 16);
+}
+
+.form_container {
+    z-index: 1;
+    order: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    grid-auto-rows: max-content;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 10px;
 }

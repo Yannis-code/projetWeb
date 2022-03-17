@@ -9,10 +9,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/caroussel.css">
     <link rel="stylesheet" type="text/css" href="css/formulaire.css">
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-
-    <script src="js/navbar.js"></script>
 </head>
 
 <body>
@@ -20,56 +19,79 @@
         <article class="article_linear">
             <h1>Coaching</h1>
             <p class="p-content">
-                Vous adorez jouer mais vous vous sentez mauvais ou vous vous appelez Mathis? Alors cette offre est faite
-                pour vous. Il vous suffit de remplir ce formulaire avec vos coordonnées et nous vous recontacterons dans
-                les plus bref délais.
+                Vous adorez jouer mais vous vous sentez mauvais ou vous vous appelez Mathis? Alors cette offre est faite pour vous. Il vous suffit de remplir ce formulaire avec vos coordonnées et nous vous recontacterons dans les plus bref délais.
                 <span class="asterix">*</span>
             </p>
         </article>
-        <form id="registration_form">
-            <div>
-                <label class="required" for="firstname">Prenom :</label>
-                <small class="output_error"></small>
-                <input type="text" id="firstname" name="firstname" placeholder="Rémi" required>
+        <div class="scrolling_caroussel_container scrolling_form_container">
+            <div class="scrolling_caroussel scrolling_form" id="carousel_fullpage">
+                <article class="card card_caroussel_fullpage">
+                    <h2>Déjà inscrit?</h2>
+                    <button class="toggleRegisterLogin">Se connecter</button>
+                    <form id="registration_form">
+                        <h2>Connection</h2>
+                        <div>
+                            <label class="required" for="firstname">Prenom :</label>
+                            <small class="output_error"></small>
+                            <input type="text" id="firstname" name="firstname" placeholder="Rémi">
+                        </div>
+                        <div>
+                            <label class="required" for="lastname">Nom :</label>
+                            <small class="output_error"></small>
+                            <input type="text" id="lastname" name="lastname" placeholder="Depain">
+                        </div>
+                        <div>
+                            <label for="birthdate">Date de naissance :</label>
+                            <small class="output_error"></small>
+                            <input type="text" id="birthdate" name="birthdate" placeholder="jj/mm/aaaa">
+                        </div>
+                        <div>
+                            <label class="required" for="useremail">E-mail :</label>
+                            <small class="output_error"></small>
+                            <input type="text" id="useremail" name="useremail" placeholder="exemple@mail.com">
+                        </div>
+                        <div>
+                            <label class="required" for="username">Identifiant de compte :</label>
+                            <small class="output_error"></small>
+                            <input type="text" id="username" name="username" value="" placeholder="Identifant">
+                        </div>
+                        <div>
+                            <label class="required" for="userpwd">Mot de passe :</label>
+                            <small class="output_error"></small>
+                            <input type="password" id="userpwd" name="userpwd" value="" placeholder="">
+                        </div>
+                        <div class="btn_submit">
+                            <button type="submit">Valider</button>
+                        </div>
+                        <output id="form_output" form="registration_form"></output>
+                        <p class="sous_condition required">
+                            Champs nécessaires
+                        </p>
+                    </form>
+                </article>
+                <article class="card card_caroussel_fullpage">
+                    <h2>Pas encore inscrit?</h2>
+                    <button class="toggleRegisterLogin">S'inscrire</button>
+                    <form id="LoginForm">
+                        <h2>Inscription</h2>
+                        <div>
+                            <label for="username">Identifiant de compte :</label>
+                            <small class="output_error"></small>
+                            <input type="text" name="username" value="" placeholder="Identifant">
+                        </div>
+                        <div>
+                            <label for="userpwd">Mot de passe :</label>
+                            <small class="output_error"></small>
+                            <input type="password" name="userpwd" value="" placeholder="">
+                        </div>
+                        <div id="btn_submit">
+                            <button type="submit">Valider</button>
+                        </div>
+                        <output id="login_output" form="LoginForm"></output>
+                    </form>
+                </article>
             </div>
-            <div>
-                <label class="required" for="lastname">Nom :</label>
-                <small class="output_error"></small>
-                <input type="text" id="lastname" name="lastname" placeholder="Depain" required>
-            </div>
-            <div>
-                <label for="birthdate">Date de naissance :</label>
-                <small class="output_error"></small>
-                <input type="text" id="birthdate" name="birthdate" placeholder="jj/mm/aaaa">
-            </div>
-            <div>
-                <label class="required" for="useremail">E-mail :</label>
-                <small class="output_error"></small>
-                <input type="text" id="useremail" name="useremail" placeholder="exemple@mail.com" required>
-            </div>
-            <div>
-                <label class="required" for="username">Identifiant de compte :</label>
-                <small class="output_error"></small>
-                <input type="text" id="username" name="username" value="" placeholder="Identifant" required>
-            </div>
-            <div>
-                <label class="required" for="userpwd">Mot de passe :</label>
-                <small class="output_error"></small>
-                <input type="password" id="userpwd" name="userpwd" value="" placeholder="" required>
-            </div>
-            <div id="btn_submit">
-                <button type="submit">Valider</button>
-            </div>
-            <output id="form_output" form="registration_form">
-
-            </output>
-            <p class="sous_condition required">
-                Champs nécessaires
-            </p>
-        </form>
-        <output id="form_output" form="registration_form">
-
-        </output>
+        </div>
 
         <article class="article_linear">
             <p class="sous_condition">
@@ -95,7 +117,7 @@
                 <a href="https://www.youtube.com/watch?v=ar5oob5elZs" class=video_cache>Caché</a>
             </nav>
 
-            <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <a id="topnav_hamburger_icon" href="javascript:void(0);">
                 <!-- Burger Menu -->
                 <span></span>
                 <span></span>
@@ -109,40 +131,21 @@
                     <li><a href="page2.html" class="topnav_responsive_menu_a">L' E-sport</a></li>
                     <li><a href="page3.html" class="topnav_responsive_menu_a">Le Garage</a></li>
                     <li><a href="formulaire.html" class="topnav_responsive_menu_a">Formulaire</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs"
-                            class="topnav_responsive_menu_a video_cache">Caché</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ar5oob5elZs" class="topnav_responsive_menu_a video_cache">Caché</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <form id="LoginForm">
-        <h1>Login Form</h1>
-        <div>
-            <label for="username">Identifiant de compte :</label>
-            <small class="output_error"></small>
-            <input type="text" id="username" name="username" value="" placeholder="Identifant">
-        </div>
-        <div>
-            <label for="userpwd">Mot de passe :</label>
-            <small class="output_error"></small>
-            <input type="password" id="userpwd" name="userpwd" value="" placeholder="">
-        </div>
-        <div id="btn_submit">
-            <button type="submit">Valider</button>
-        </div>
-        <div>
-            <p>Pas déjà inscrit? <a href="formulaire.html">inscription</a></p>
-        </div>
-    </form>
-
-
-
     <header>
         <img src="src/img/page1/logo_rl.png" alt="rocket logo">
     </header>
 
-    <script src="js/formulaire.js"></script>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/caroussel.js"></script>
 </body>
 
 </html>

@@ -1,73 +1,56 @@
-<<<<<<< HEAD
-function showAside(hide = false) {
-    var body = document.querySelector("body");
-    var aside = document.getElementById("toc_container");
-    var btn = document.getElementById("show_aside_button");
-    var blur = document.getElementById("blur");
-    if (aside.className === "" && !hide) {
-        for (let index = 0; index < body.children.length; index++) {
-            const el = body.children[index];
-            if (el != btn && el != aside) {
-                el.style.filter = "blur(2px)";
-            }
-        }
-        aside.className = "open";
-        btn.className = "open";
-        btn.innerHTML = "&#8249;"
-    } else {
-        for (let index = 0; index < body.children.length; index++) {
-            const el = body.children[index];
-            if (el != btn && el != aside) {
-                el.style.filter = "none";
-            }
-        }
-        aside.className = "";
-        btn.className = "";
-        btn.innerHTML = "&#8250;"
-    }
-}
+const aside = document.getElementById("toc_container");
+const btn = document.getElementById("show_aside_button");
+const asideLinks = document.querySelectorAll("#toc_container a");
 
-window.addEventListener('resize', function(event) {
-    if (window.innerWidth > 768 && document.getElementById("toc_container").className != "") {
-        showAside();
-    }
-    if (window.innerWidth > 768 && document.getElementById("topnav_responsive_menu").className != "") {
-        showResponsiveMenu();
-    }
-=======
-function showAside(hide = false) {
-    var body = document.querySelector("body");
-    var aside = document.getElementById("toc_container");
-    var btn = document.getElementById("show_aside_button");
-    if (aside.className === "" && !hide) {
-        for (let index = 0; index < body.children.length; index++) {
-            const el = body.children[index];
-            if (el != btn && el != aside) {
-                el.style.filter = "blur(2px)";
-            }
+asideLinks.forEach(element => {
+    element.addEventListener("click", (e) => {
+        if (aside.classList.contains("open")) {
+            overlay.classList.remove("overlay_visible");
+            aside.classList.remove("open");
+            btn.classList.remove("open");
+            aside.style.zIndex = "10";
+            btn.style.zIndex = "10";
+            btn.innerHTML = "&#8250;"
         }
-        aside.className = "open";
-        btn.className = "open";
+    })
+});
+
+btn.addEventListener("click", (e) => {
+    if (!aside.classList.contains("open")) {
+        overlay.classList.add("overlay_visible");
+        aside.classList.add("open");
+        btn.classList.add("open");
+        aside.style.zIndex = "100";
+        btn.style.zIndex = "100";
         btn.innerHTML = "&#8249;"
     } else {
-        for (let index = 0; index < body.children.length; index++) {
-            const el = body.children[index];
-            if (el != btn && el != aside) {
-                el.style.filter = "none";
-            }
-        }
-        aside.className = "";
-        btn.className = "";
+        overlay.classList.remove("overlay_visible");
+        aside.classList.remove("open");
+        btn.classList.remove("open");
+        aside.style.zIndex = "10";
+        btn.style.zIndex = "10";
         btn.innerHTML = "&#8250;"
     }
-}
+})
+
+overlay.addEventListener("click", (e) => {
+    if (aside.classList.contains("open")) {
+        overlay.classList.remove("overlay_visible");
+        aside.classList.remove("open");
+        btn.classList.remove("open");
+        aside.style.zIndex = "10";
+        btn.style.zIndex = "10";
+        btn.innerHTML = "&#8250;"
+    }
+});
 
 window.addEventListener('resize', function (event) {
-    if (window.innerWidth > 768 && document.getElementById("toc_container").className != "") {
-        showAside();
+    if (window.innerWidth > 768 && aside.classList.contains("open")) {
+        overlay.classList.remove("overlay_visible");
+        aside.classList.remove("open");
+        btn.classList.remove("open");
+        aside.style.zIndex = "10";
+        btn.style.zIndex = "10";
+        btn.innerHTML = "&#8250;"
     }
-    if (window.innerWidth > 768 && document.getElementById("topnav_responsive_menu").className != "") {
-        showResponsiveMenu();
-    }
->>>>>>> d0006d96d47ab1f515daf02fa3f154498e27ed6b
 }, true);
