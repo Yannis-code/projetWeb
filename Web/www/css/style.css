@@ -32,7 +32,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-image: url(../src/img/bg/forbiddenTemple.gif);
+    background-image: url(../src/img/bg/circuit.gif);
     background-attachment: fixed;
 }
 
