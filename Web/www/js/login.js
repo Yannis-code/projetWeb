@@ -22,3 +22,16 @@ const login = () => {
     };
     xhr.send(formData);
 }
+
+var showuserpwd_login = document.getElementById("showuserpwd_login");
+var password_login = document.getElementById("userpwd_login");
+
+showuserpwd_login.addEventListener("click", (e) => {
+    if (password_login.type === "password") {
+        password_login.type = "text";
+        showuserpwd_login.checked = true;
+    } else {
+        password_login.type = "password";
+        showuserpwd_login.checked = false;
+    }
+})

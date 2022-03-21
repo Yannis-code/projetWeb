@@ -16,7 +16,7 @@ const invalidError = {
     "birthdate": "Veuillez entrer une date de naissance valide (jj/mm/aaaa)",
     "username": "Veuillez entrer un identifiant de compte valide (minimum 6 caractères)",
     "useremail": "Veuillez entrer un email valide (ex: exemple@gmail.com)",
-    "userpwd": "Veuillez entrer un mot de passe valide",
+    "userpwd": "Veuillez entrer un mot de passe valide,\n(min: 8 caractère, 1 majuscule, 1 minuscule, 1 chiffre)",
 }
 
 function showMessage(input, message, type) {
@@ -101,7 +101,7 @@ function validateUsername(input, requiredMsg, invalidMsg) {
 
 function validatePassword(input, requiredMsg, invalidMsg) {
     const password = input.value.trim();
-    const passwordRegex = /([0-9a-zA-Z]){8,}/;
+    const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 
     if (password === "") {
         return showError(input, requiredMsg);
@@ -190,4 +190,17 @@ container.forEach((el, i) => {
             div[i].scrollBy({ left: scroll, behavior: 'smooth' })
         }
     })
+})
+
+var showuserpwd = document.getElementById("showuserpwd");
+var password = document.getElementById("userpwd");
+
+showuserpwd.addEventListener("click", (e) => {
+    if (password.type === "password") {
+        password.type = "text";
+        showuserpwd.checked = true;
+    } else {
+        password.type = "password";
+        showuserpwd.checked = false;
+    }
 })

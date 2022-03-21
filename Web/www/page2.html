@@ -164,12 +164,12 @@
                 <a href="https://www.youtube.com/watch?v=ar5oob5elZs" class=video_cache>Caché</a>
             </nav>
 
-            <a id="topnav_hamburger_icon" href="javascript:void(0);">
+            <div id="topnav_hamburger_icon">
                 <!-- Burger Menu -->
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </div>
 
             <!-- Responsive Menu -->
             <nav id="topnav_responsive_menu">
@@ -196,7 +196,11 @@
         <div>
             <label for="userpwd">Mot de passe :</label>
             <small class="output_error"></small>
-            <input type="password" name="userpwd" value="" placeholder="">
+            <input type="password" id="userpwd_login" name="userpwd" value="" placeholder="">
+        </div>
+        <div class="showuserpwd">
+            <input type="checkbox" id="showuserpwd_login" name="showuserpwd_login" value="" placeholder="">
+            <label for="showuserpwd_login">Afficher le mot de passe</label>
         </div>
         <div id="btn_submit">
             <button type="submit">Valider</button>

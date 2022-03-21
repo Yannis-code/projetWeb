@@ -69,6 +69,7 @@ textarea {
 }
 
 .output_error {
+    text-align: left;
     color: red;
 }
 
@@ -99,4 +100,14 @@ textarea {
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 10px;
+}
+
+.showuserpwd {
+    display: flex;
+    flex-direction: row;
+}
+
+.showuserpwd input {
+    width: auto;
+    margin: 0 0.5em;
 }
