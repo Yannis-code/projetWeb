@@ -4,6 +4,8 @@ $("#submitmsg").click(function(e) {
     updateChat();
 })
 
+updateChat();
+
 setInterval(() => updateChat(), 1000);
 
 function postChat() {
@@ -24,9 +26,8 @@ function postChat() {
 function updateChat() {
     var output = "";
     $.get("htbin/chatget.py", function(response) {
-        console.log(response);
         response.forEach(element => {
-            output += "<p>" + element["time"] + " " + element["user"] + " : " + element["msg"] + "</p>";
+            output = "<p>" + element["time"] + " " + element["user"] + " : " + element["msg"] + "</p>" + output;
         });
         $("#chatbox").html(output);
     })
