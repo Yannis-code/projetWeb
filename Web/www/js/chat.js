@@ -18,7 +18,7 @@ function postChat() {
         contentType: false,
         type: 'POST',
         success: function(response) {
-
+            $('#usermsg').val("");
         }
     });
 }
@@ -27,8 +27,10 @@ function updateChat() {
     var output = "";
     $.get("htbin/chatget.py", function(response) {
         response.forEach(element => {
-            output = "<p>" + element["time"] + " " + element["user"] + " : " + element["msg"] + "</p>" + output;
+            output += "<p>" + element["time"] + " " + element["user"] + " : " + element["msg"] + "</p>";
         });
         $("#chatbox").html(output);
+        var d = $('#chatbox');
+        d.scrollTop(d.prop("scrollHeight"));
     })
 }

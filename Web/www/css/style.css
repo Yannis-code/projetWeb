@@ -469,17 +469,28 @@ button:disabled,
 /* chat */
 
 #chat {
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Le contenue fait toute la largeur de la page*/
+    #chat {
+        background-color: rgb(var(--theme-color-1));
+        margin: auto;
+        width: 100%;
+    }
 }
 
 #chatbox {
     text-align: left;
-    margin: 0 auto;
-    margin-bottom: 25px;
     padding: 10px;
     background: #fff;
-    height: 60%;
+    height: max-content;
+    margin: auto;
     width: 85%;
     border: 1px solid #363a3b;
     border-radius: 10px;
@@ -490,4 +501,8 @@ button:disabled,
     width: 100%;
     border: 3px solid #363a3b;
     border-radius: 10px;
+}
+
+#chat_form {
+    margin-bottom: 25px;
 }
