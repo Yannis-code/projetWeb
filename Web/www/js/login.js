@@ -17,7 +17,7 @@ const login = () => {
     xhr.open("POST", "htbin/login.py");
     xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("login_output").innerHTML = this.responseText;
+            document.getElementById("login_output").innerHTML = 'Connection réussie, vous pouvez <a href="./chat.html">accèder au chat.</a>';
         }
     };
     xhr.send(formData);
