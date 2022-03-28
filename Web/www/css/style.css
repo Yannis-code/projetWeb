@@ -468,20 +468,20 @@ button:disabled,
 
 /* chat */
 
-#chat{
-    width: 20%;
+#chat {
+    width: 60%;
     height: 60%;
 }
 
 #chatbox {
-    text-align:left;
-    margin:0 auto;
-    margin-bottom:25px;
-    padding:10px;
-    background:#fff;
-    height:60%;
-    width:85%;
-    border:1px solid #363a3b;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #fff;
+    height: 60%;
+    width: 85%;
+    border: 1px solid #363a3b;
     border-radius: 10px;
-    overflow:auto; 
+    overflow: auto;
 }
