@@ -485,3 +485,10 @@ button:disabled,
     border-radius: 10px;
     overflow:auto; 
 }
+
+  
+#usermsg {
+    width:100%;
+    border:3px solid #363a3b; 
+    border-radius: 10px;
+}
