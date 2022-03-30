@@ -76,12 +76,12 @@ function validateDate(input, requiredMsg, invalidMsg) {
     if (inputDate.getFullYear() != parseInt(inputDateArray[2]) || inputDate.getMonth() != parseInt(inputDateArray[1] - 1) || inputDate.getDate() != parseInt(inputDateArray[0])) {
         return showError(input, invalidMsg);
     }
-    // Gérer le cas où la date indiqué est après la date du jour
+
     const currentDate = new Date();
     const currentDateNoTime = new Date(currentDate.toDateString());
     const InputDateNoTime = new Date(inputDate.toDateString());
 
-    if ((currentDateNoTime.getTime() - InputDateNoTime.getTime()) / (24 * 60 * 60 * 1000) < 0) {
+    if (currentDateNoTime.getTime() - InputDateNoTime.getTime() < 0) {
         return showError(input, "La date renseignée doit être passée");
     }
     return showSuccess(input);
@@ -166,7 +166,6 @@ const register = () => {
         xhr = new XMLHttpRequest();
     }
     var formData = new FormData(registerForm);
-    console.log(formData);
 
     xhr.open("POST", "htbin/register.py");
     xhr.onreadystatechange = function() {
