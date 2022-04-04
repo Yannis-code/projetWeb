@@ -18,7 +18,7 @@
     <main id="chat">
         <h1>Chat en ligne</h1>
         <div id="chatbox"></div>
-        <form name="message" id="chat_form" action="">
+        <form name="message" id="chat_form" action="#">
             <input name="msg" type="text" id="usermsg" />
             <button name="submitmsg" type="submit" id="submitmsg">Envoyer</button>
         </form>
@@ -68,15 +68,15 @@
         <div>
             <label for="username">Identifiant de compte :</label>
             <small class="output_error"></small>
-            <input type="text" name="username" value="" placeholder="Identifant">
+            <input type="text" id="username" name="username" value="" placeholder="Identifant">
         </div>
         <div>
             <label for="userpwd">Mot de passe :</label>
             <small class="output_error"></small>
-            <input type="password" id="userpwd_login" name="userpwd" value="" placeholder="">
+            <input type="password" id="userpwd" name="userpwd" value="" placeholder="password">
         </div>
         <div class="showuserpwd">
-            <input type="checkbox" id="showuserpwd_login" name="showuserpwd_login" value="" placeholder="">
+            <input type="checkbox" id="showuserpwd_login" name="showuserpwd_login" value="">
             <label for="showuserpwd_login">Afficher le mot de passe</label>
         </div>
         <div id="btn_submit">
