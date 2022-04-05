@@ -89,7 +89,7 @@
 }
 
 #carousel_fullpage .card {
-    aspect-ratio: 0;
+    aspect-ratio: unset;
     height: calc(100% - 40px);
     background-color: white;
     padding-top: 2em;

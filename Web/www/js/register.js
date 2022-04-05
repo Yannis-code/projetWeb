@@ -170,7 +170,7 @@ const register = () => {
     xhr.open("POST", "htbin/register.py");
     xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("form_output").innerHTML = this.responseText;
+            document.getElementById("form_output").innerHTML = "Inscription réussie";
         }
     };
     xhr.send(formData);

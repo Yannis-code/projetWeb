@@ -477,7 +477,7 @@ button:disabled,
 }
 
 #chatbox {
-    display: flexbox;
+    display: block;
     overflow-y: auto;
     min-height: 20em;
     border: 1px solid black;
@@ -503,7 +503,7 @@ button:disabled,
 
 .messages {
     overflow: hidden;
-    padding: 3px;
+    padding: 0.5em;
 }
 
 .msg_time {
@@ -512,6 +512,8 @@ button:disabled,
 }
 
 .msg_user {
+    font-size: small;
+    color: #363a3b;
     text-transform: uppercase;
 }
 
