@@ -28,7 +28,7 @@ const login = () => {
 }
 
 var showuserpwd_login = document.getElementById("showuserpwd_login");
-var password_login = document.getElementById("userpwd");
+var password_login = document.querySelector(".userpwd_login");
 
 showuserpwd_login.addEventListener("click", (e) => {
     if (password_login.type === "password") {
